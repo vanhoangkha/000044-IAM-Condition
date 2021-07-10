@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo User có quyền operate EC2 on Triển Khai Ứng dụng ShareNote trên Máy ảo Windows/Ubuntu</title>
+    <link>/vi/2-create-user-operate-ec2/</link>
+    <description>Recent content in Tạo User có quyền operate EC2 on Triển Khai Ứng dụng ShareNote trên Máy ảo Windows/Ubuntu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 May 2020 00:38:32 +0700</lastBuildDate>
+    
+	<atom:link href="/vi/2-create-user-operate-ec2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

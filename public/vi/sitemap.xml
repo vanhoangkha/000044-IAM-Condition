@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/vi/1-what-is-iam/</loc>
+    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-create-user-operate-ec2/</loc>
+    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/3-create-user-operate-rds/</loc>
+    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/4-create-group-operate-ec2-and-rds/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/5-configure-iam-role-with-condition/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/tags/"
+                />
+  </url>
+  
+</urlset>
