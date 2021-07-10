@@ -2,7 +2,7 @@
 title = "Tạo Group quản trị"
 date = 2021
 weight = 4
-chapter = true
+chapter = false
 pre = "<b>4. </b>"
 +++
 

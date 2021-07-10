@@ -2,7 +2,7 @@
 title = "Tạo User quản trị EC2"
 date = 2021
 weight = 2
-chapter = true
+chapter = false
 pre = "<b>2. </b>"
 +++
 
