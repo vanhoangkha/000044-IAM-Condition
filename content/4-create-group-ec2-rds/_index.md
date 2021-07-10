@@ -1,6 +1,6 @@
 +++
-title = "Tạo Group có quyền operate EC2 và RDS"
-date = 2020-04-18T00:38:32+07:00
+title = "Tạo Group quản trị"
+date = 2021
 weight = 4
 chapter = true
 pre = "<b>4. </b>"

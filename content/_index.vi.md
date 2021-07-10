@@ -1,14 +1,17 @@
 +++
-title = "IAM Role & Secure Token Service (STS) in AWS Cloud"
-date = 2020
+title = "IAM Role & Condition"
+date = 2021
 weight = 1
-chapter = true
+chapter = false
 +++
 
-# IAM Role & Secure Token Service (STS) trong AWS Cloud
+# IAM Role & Condition 
 
-1. [Khái niệm IAM](http://localhost:1313/vi/1-what-is-iam/)
-2. [Tạo User có quyền operate EC2](http://localhost:1313/vi/2-create-user-operate-ec2/)
-3. [Tạo User có quyền operate RDS](http://localhost:1313/vi/3-create-user-operate-rds/)
-4. [Tạo Group có quyền operate cả EC2 và RDS](http://localhost:1313/vi/4-create-group-operate-ec2-and-rds/)
-5. [Cấu hình IAM Role theo Điều kiện](http://localhost:1313/vi/5-configure-iam-role-with-condition/)
+Ở bài [Bắt đầu với IAM](https://000002.awsstudygroup.com/) chúng ta đã tạo IAM User có quyền admin cho mọi dịch vụ. Trong thực tế chúng ta thường chỉ cấp quyền vừa đủ ( tối thiểu ) cho người quản trị.
+Trong bài này chúng ta sẽ cùng ôn lại khái niệm về IAM, sau đó tiến hành tạo User/Group đóng vai trò admin từng dịch vụ EC2 , RDS. Bước tiếp theo chúng ta tạo Role và tăng cường tính bảo mật bằng cách đặt thêm điều kiện giới hạn theo địa chỉ IP và thời gian.
+
+1. [Khái niệm IAM](1-iam-intro/)
+2. [Tạo User quản trị EC2](2-create-ec2-admin/)
+3. [Tạo User quản trị RDS](3-create-rds-admin/)
+4. [Tạo Group quản trị](4-create-group-ec2-rds/)
+5. [Cấu hình IAM Role & Condition](5-configure-iam-role-condition/)

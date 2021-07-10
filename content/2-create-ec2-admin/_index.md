@@ -1,12 +1,12 @@
 +++
-title = "Tạo User có quyền operate EC2"
-date = 2020-05-14T00:38:32+07:00
+title = "Tạo User quản trị EC2"
+date = 2021
 weight = 2
 chapter = true
 pre = "<b>2. </b>"
 +++
 
-#  Tạo User có quyền operate EC2
+#  Tạo User quản trị dịch vụ EC2
 ---
 #### Để vận hành bất cứ dịch vụ nào, User cần phải được cấp quyền thông qua policy. Policy được attach cho User có thể là trực tiếp hoặc gián tiếp. Đó là 
 - Cấp quyền cho User thông qua Policy gán cho Group 

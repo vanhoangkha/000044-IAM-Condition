@@ -3,13 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/vi/1-what-is-iam/</loc>
+    <loc>/vi/1-iam-intro/</loc>
     <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-iam-intro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-iam-intro/"
+                />
   </url>
   
   <url>
     <loc>/vi/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -23,23 +33,138 @@
   </url>
   
   <url>
-    <loc>/vi/2-create-user-operate-ec2/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <loc>/vi/5-configure-iam-role-with-condition/5.1-iam-admin-role/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-configure-iam-role-with-condition/5.1-iam-admin-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-configure-iam-role-with-condition/5.1-iam-admin-role/"
+                />
   </url>
   
   <url>
-    <loc>/vi/3-create-user-operate-rds/</loc>
-    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <loc>/vi/5-configure-iam-role-with-condition/5.2-create-iam-user/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-configure-iam-role-with-condition/5.2-create-iam-user/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-configure-iam-role-with-condition/5.2-create-iam-user/"
+                />
   </url>
   
   <url>
-    <loc>/vi/4-create-group-operate-ec2-and-rds/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <loc>/vi/2-create-ec2-admin/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-create-ec2-admin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-create-ec2-admin/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/3-create-rds-admin/</loc>
+    <lastmod>2020-05-14T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-create-rds-admin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-create-rds-admin/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-configure-iam-role-with-condition/5.3-configure-switch-role/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-configure-iam-role-with-condition/5.3-configure-switch-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-configure-iam-role-with-condition/5.3-configure-switch-role/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-configure-iam-role-with-condition/5.4-condition-ip/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-configure-iam-role-with-condition/5.4-condition-ip/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-configure-iam-role-with-condition/5.4-condition-ip/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/4-create-group-ec2-rds/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-create-group-ec2-rds/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-create-group-ec2-rds/"
+                />
   </url>
   
   <url>
     <loc>/vi/5-configure-iam-role-with-condition/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-configure-iam-role-with-condition/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-configure-iam-role-with-condition/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-configure-iam-role-with-condition/5.5-condition-time/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-configure-iam-role-with-condition/5.5-condition-time/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-configure-iam-role-with-condition/5.5-condition-time/"
+                />
   </url>
   
   <url>

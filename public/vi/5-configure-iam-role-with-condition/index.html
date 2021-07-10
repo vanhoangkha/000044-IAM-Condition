@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình IAM Role theo Điều kiện :: Triển Khai Ứng dụng ShareNote trên Máy ảo Windows/Ubuntu</title>
+    <title>Cấu hình IAM Role Condition :: Triển Khai Ứng dụng ShareNote trên Máy ảo Windows/Ubuntu</title>
 
     
-    <link href="/css/nucleus.css?1625918797" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1625918797" rel="stylesheet">
-    <link href="/css/hybrid.css?1625918797" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1625918797" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1625918797" rel="stylesheet">
-    <link href="/css/auto-complete.css?1625918797" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1625918797" rel="stylesheet">
-    <link href="/css/theme.css?1625918797" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1625918797" rel="stylesheet">
+    <link href="/css/nucleus.css?1625929558" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625929558" rel="stylesheet">
+    <link href="/css/hybrid.css?1625929558" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625929558" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625929558" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625929558" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625929558" rel="stylesheet">
+    <link href="/css/theme.css?1625929558" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625929558" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1625918797" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625929558" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1625918797"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625929558"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1625918797"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1625918797"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625929558"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625929558"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1625918797"></script>
+<script type="text/javascript" src="/js/search.js?1625929558"></script>
 
     
   </div>
@@ -82,12 +82,12 @@
  
   
     
-    <li data-nav-id="/vi/1-what-is-iam/" title="Giới thiệu về IAM" class="dd-item 
+    <li data-nav-id="/vi/1-iam-intro/" title="Giới thiệu về IAM" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-what-is-iam/">
+      <a href="/vi/1-iam-intro/">
           <b>1. </b>Giới thiệu về IAM
           
             <i class="fas fa-check read-icon"></i>
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-create-user-operate-ec2/" title="Tạo User có quyền operate EC2" class="dd-item 
+    <li data-nav-id="/vi/2-create-ec2-admin/" title="Tạo User quản trị EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-create-user-operate-ec2/">
-          <b>2. </b>Tạo User có quyền operate EC2
+      <a href="/vi/2-create-ec2-admin/">
+          <b>2. </b>Tạo User quản trị EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -134,13 +134,13 @@
  
   
     
-    <li data-nav-id="/vi/3-create-user-operate-rds/" title="Tạo User có quyền operate RDS" class="dd-item 
+    <li data-nav-id="/vi/3-create-rds-admin/" title="Tạo User quản trị RDS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-user-operate-rds/">
-          <b>3. </b>Tạo User có quyền operate RDS
+      <a href="/vi/3-create-rds-admin/">
+          <b>3. </b>Tạo User quản trị RDS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -160,13 +160,13 @@
  
   
     
-    <li data-nav-id="/vi/4-create-group-operate-ec2-and-rds/" title="Tạo Group có quyền operate EC2 và RDS" class="dd-item 
+    <li data-nav-id="/vi/4-create-group-ec2-rds/" title="Tạo Group quản trị" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-create-group-operate-ec2-and-rds/">
-          <b>4. </b>Tạo Group có quyền operate EC2 và RDS
+      <a href="/vi/4-create-group-ec2-rds/">
+          <b>4. </b>Tạo Group quản trị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -186,18 +186,170 @@
  
   
     
-    <li data-nav-id="/vi/5-configure-iam-role-with-condition/" title="Cấu hình IAM Role theo Điều kiện" class="dd-item 
+    <li data-nav-id="/vi/5-configure-iam-role-with-condition/" title="Cấu hình IAM Role Condition" class="dd-item 
         
         active
         
         ">
       <a href="/vi/5-configure-iam-role-with-condition/">
-          <b>5. </b>Cấu hình IAM Role theo Điều kiện
+          <b>5. </b>Cấu hình IAM Role Condition
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-configure-iam-role-with-condition/5.1-iam-admin-role/" title="Tạo IAM Role có quyền Admin" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-configure-iam-role-with-condition/5.1-iam-admin-role/">
+          <b>5.1 </b>Tạo IAM Role có quyền Admin
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-configure-iam-role-with-condition/5.2-create-iam-user/" title="Tạo IAM User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-configure-iam-role-with-condition/5.2-create-iam-user/">
+          <b>5.2 </b>Tạo IAM User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-configure-iam-role-with-condition/5.3-configure-switch-role/" title="Cấu hình Switch role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-configure-iam-role-with-condition/5.3-configure-switch-role/">
+          <b>5.3 </b>Cấu hình Switch role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-configure-iam-role-with-condition/5.4-condition-ip/" title="Giới hạn theo IP" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-configure-iam-role-with-condition/5.4-condition-ip/">
+          <b>5.4 </b>Giới hạn theo IP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-configure-iam-role-with-condition/5.5-condition-time/" title="Giới hạn theo Thời gian " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-configure-iam-role-with-condition/5.5-condition-time/">
+          <b>5.5 </b>Giới hạn theo Thời gian 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -241,6 +393,18 @@
               
               
                   
+                    
+                    
+                      <option id="en" value="/5-configure-iam-role-with-condition/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
               
                   
                     
@@ -273,11 +437,11 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7836867&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -304,6 +468,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -314,7 +480,7 @@
             
           
           
-            <a href='/vi/'>IAM Role & Secure Token Service (STS) in AWS Cloud</a> > Cấu hình IAM Role theo Điều kiện
+            <a href='/vi/'>IAM Role & Condition</a> > Cấu hình IAM Role Condition
           
         
           
@@ -323,6 +489,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -330,97 +511,27 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Cấu hình IAM Role Condition
+            </h1>
           
 
         
 
 
 
-	<h4 id="các-bước-thực-hiện">Các bước thực hiện:</h4>
+	<h4 id="cấu-hình-iam-role-condition">Cấu hình IAM Role Condition</h4>
+<p>Việc sử dụng Role là một phương pháp thực hành tốt trong hệ thống AWS. Ở bước này chúng ta không chỉ cấu hình cho phép người dùng sử dụng ( assume ) 1 role cụ thể bất cứ lúc nào mà còn thêm vào các Condition ( điều kiện ). Chỉ khi thỏa điều kiện về địa chỉ IP hoặc thời gian, người dùng mới có thể thực hiện switch role.
+Để hiểu cách switch role, bạn có thể xem lại bài <a href="https://000002.awsstudygroup.com/">Bắt đầu với IAM</a></p>
 <ul>
-<li><a href="#h4-idb%C6%B0%E1%BB%9Bc-1-t%E1%BA%A1o-iam-role-c%C3%B3-quy%E1%BB%81n-qu%E1%BA%A3n-tr%E1%BB%8B-2b%C6%B0%E1%BB%9Bc-1-t%E1%BA%A1o-iam-role-c%C3%B3-quy%E1%BB%81n-qu%E1%BA%A3n-tr%E1%BB%8Bh4">#### Bước 1: Tạo IAM Role có quyền Quản trị</a></li>
-<li><a href="#h4-idb%C6%B0%E1%BB%9Bc-2-t%E1%BA%A1o-iam-user-2b%C6%B0%E1%BB%9Bc-2-t%E1%BA%A1o-iam-userh4">#### Bước 2: Tạo IAM User</a></li>
-<li><a href="#h4-idb%C6%B0%E1%BB%9Bc-3-c%E1%BA%A5u-h%C3%ACnh-switch-role-cho-iam-user-2b%C6%B0%E1%BB%9Bc-3-c%E1%BA%A5u-h%C3%ACnh-switch-role-cho-iam-userh4">#### Bước 3: Cấu hình Switch role cho IAM User</a></li>
-<li><a href="#h4-idb%C6%B0%E1%BB%9Bc-4-c%E1%BA%A5u-h%C3%ACnh-condition-1---gi%E1%BB%9Bi-h%E1%BA%A1n-ip-%C4%91%C6%B0%E1%BB%A3c-ph%C3%A9p-switch-role-2b%C6%B0%E1%BB%9Bc-4-c%E1%BA%A5u-h%C3%ACnh-condition-1---gi%E1%BB%9Bi-h%E1%BA%A1n-ip-%C4%91%C6%B0%E1%BB%A3c-ph%C3%A9p-switch-roleh4">#### Bước 4: Cấu hình Condition 1 - Giới hạn IP được phép Switch role</a></li>
-<li><a href="#h4-idb%C6%B0%E1%BB%9Bc-5-c%E1%BA%A5u-h%C3%ACnh-condition-2---gi%E1%BB%9Bi-h%E1%BA%A1n-th%E1%BB%9Di-gian-%C4%91%C6%B0%E1%BB%A3c-ph%C3%A9p-switch-role-2b%C6%B0%E1%BB%9Bc-5-c%E1%BA%A5u-h%C3%ACnh-condition-2---gi%E1%BB%9Bi-h%E1%BA%A1n-th%E1%BB%9Di-gian-%C4%91%C6%B0%E1%BB%A3c-ph%C3%A9p-switch-roleh4">#### Bước 5: Cấu hình Condition 2 - Giới hạn Thời gian được phép Switch role</a></li>
-</ul>
-<hr>
-<h4 id="bước-1-tạo-iam-role-có-quyền-quản-trị">Bước 1: Tạo IAM Role có quyền Quản trị</h4>
-<hr>
-<ul>
-<li>Đăng nhập vào IAM console theo link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a></li>
-<li>Tại cột điều hướng bên trái, chọn <strong>Roles</strong>, sau đó bấm <strong>Create role</strong></li>
-<li>Ở phần trusted entity, chọn <strong>EC2</strong>. 
-Cần làm rõ một chút, trusted entity là thực thể được phép assume role. Mặc dù điều ta muốn là trusted entity là IAM User, tuy nhiên không có lựa chọn trực tiếp cho mong muốn này, do vậy ta chọn <strong>EC2</strong>.
-<img src="/images/create-role1.PNG?width=90pc" alt="1"></li>
-<li>Bấm <strong>Next: Permission</strong>. Tại mục <strong>Attach permissions policies</strong>, chọn <strong>AdminstratorAccess</strong> 
-<img src="/images/create-role2.PNG?width=90pc" alt="2"></li>
-<li>Bấm <strong>Next: Tags</strong> để nhập thông tin Tag (nếu cần). Sau đó bấm <strong>Next: Review</strong></li>
-<li>Tại trang <strong>Review</strong>, nhập tên của Role, <strong>asg-RoleFullAccess</strong>, sau đó bấm <strong>Create role</strong> để kết thúc quá trình tạo Role
-<img src="/images/create-role3.PNG?width=90pc" alt="3"></li>
-</ul>
-<hr>
-<h4 id="bước-2-tạo-iam-user">Bước 2: Tạo IAM User</h4>
-<hr>
-<ul>
-<li>Truy cập trang IAM console ở link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a></li>
-<li>Thông tin <strong>User name</strong>, nhập <strong>asg-user4</strong></li>
-<li>Bấm chọn check box cho <strong>AWS Management Console access</strong>, chọn <strong>Custom password</strong>, sau đó nhập password vào text box.</li>
-<li>Tiếp theo, bỏ chọn <strong>Require password reset</strong>* để không phải thay đổi mật khẩu ở lần Log in đầu tiên</li>
-<li>Bấm <strong>Next: Permission</strong>, tuy nhiên ta bỏ qua bước cấu hình này để thực hiện assume role sau này.</li>
-<li>Bấm <strong>Next: Tags</strong> để nhập thông tin Tag (nếu cần). Sau đó bấm <strong>Next: Review</strong>
-<img src="/images/create-role4.PNG?width=90pc" alt="4"></li>
-<li>Bấm <strong>Create User</strong>. Thực hiện lưu thông tin <strong>Access Key ID</strong> và <strong>Secret Access Key</strong> rồi bấm <strong>Close</strong> để kết thúc quá trình tạo User mới
-Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền truy cập tới dịch vụ nào.
-<img src="/images/AssumeRole1.PNG?width=90pc" alt="5"></li>
-</ul>
-<hr>
-<h4 id="bước-3-cấu-hình-switch-role-cho-iam-user">Bước 3: Cấu hình Switch role cho IAM User</h4>
-<hr>
-<ul>
-<li>Truy cập trang IAM console ở link <a href="https://console.aws.amazon.com/iam/home#/home,">https://console.aws.amazon.com/iam/home#/home,</a> ở cột điều hướng bên trái, chọn <strong>User</strong></li>
-<li>Bấm vào user mới tạo <strong>asg-user4</strong>, sao chép thông tin <strong>User ARN</strong></li>
-<li>Tại cột điều hướng bên trái, bấm chọn <strong>Roles</strong>, rồi chọn IAM Role mới tạo <strong>asg-RoleFullAccess</strong>, sao chép thông tin <strong>Role ARN</strong> và <strong>Instance Profile ARNs</strong></li>
-<li>Ở tab <strong>Trust relationships</strong>, bấm <strong>edit trust relationship</strong>
-<img src="/images/AssumeRole2.PNG?width=90pc" alt="6"></li>
-<li>Bổ sung <strong>AWS</strong> với thông tin <strong>User ARN</strong> như hình bên dưới. Sau đó bấm <strong>Update Trust Policy</strong>
-<img src="/images/AssumeRole3.PNG?width=90pc" alt="7">
-Để kiểm tra assume role, ta thao tác như sau</li>
-<li>Thực hiện log in user <strong>asg-user4</strong>, sau đó bấm vào tên của user ở góc phải màn hình, chọn <strong>Switch Role</strong>
-<img src="/images/AssumeRole4.PNG?width=90pc" alt="8"></li>
-<li>Tại màn hình <strong>Switch Role</strong>, nhập các thông tin theo yêu cầu bao gồm, <strong>Account</strong> là Account number, <strong>Role</strong> là tên của Role, <strong>Display name</strong> là tên hiển thị cho User sau khi switch role.
-<img src="/images/AssumeRole5.PNG?width=90pc" alt="9"></li>
-<li>Bấm <strong>Switch role</strong> để thực hiện assume role cho user <strong>asg-user4</strong>. Thực hiện truy cập các dịch vụ cơ bản như S3 để xác nhận cấu hình Switch role thành công. Hình bên dưới thể hiện <strong>asg-user4</strong> sau khi switch role đã có khả năng tạo bucket.
-<img src="/images/AssumeRole6-success.PNG?width=90pc" alt="10"></li>
-</ul>
-<hr>
-<h4 id="bước-4-cấu-hình-condition-1---giới-hạn-ip-được-phép-switch-role">Bước 4: Cấu hình Condition 1 - Giới hạn IP được phép Switch role</h4>
-<hr>
-<ul>
-<li>Truy cập trang IAM console ở link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a> với quyền user Admin</li>
-<li>Tại cột điều hướng bên trái, bấm chọn <strong>Roles</strong>, rồi chọn IAM Role mới tạo <strong>asg-RoleFullAccess</strong></li>
-<li>Ở tab <strong>Trust relationships</strong>, bấm <strong>edit trust relationship</strong>, bổ sung <strong>Condition</strong> như bên dưới, sau đó bấm <strong>Update Trust Policy</strong>
-<img src="/images/AssumeRole7-Condition1.PNG?width=90pc" alt="11"></li>
-<li>Sau khi cập nhật trust policy, phần <strong>Condition</strong> được bổ sung thông tin IP được phép thực hiện switch role
-<img src="/images/AssumeRole8-Condition1.PNG?width=90pc" alt="12"></li>
-<li>Trở lại phiên log in của user <strong>asg-user4</strong>, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do ta đang truy cập dịch vụ từ thiết bị không có IP như trong điều kiện.
-<img src="/images/AssumeRole9-Condition1.PNG?width=90pc" alt="13"></li>
-</ul>
-<hr>
-<h4 id="bước-5-cấu-hình-condition-2---giới-hạn-thời-gian-được-phép-switch-role">Bước 5: Cấu hình Condition 2 - Giới hạn Thời gian được phép Switch role</h4>
-<hr>
-<ul>
-<li>Truy cập trang IAM console ở link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a> với quyền user Admin</li>
-<li>Tại cột điều hướng bên trái, bấm chọn <strong>Roles</strong>, rồi chọn IAM Role mới tạo <strong>asg-RoleFullAccess</strong></li>
-<li>Ở tab <strong>Trust relationships</strong>, bấm <strong>edit trust relationship</strong>, bổ sung <strong>Condition</strong> như bên dưới, sau đó bấm <strong>Update Trust Policy</strong>
-<img src="/images/AssumeRole10-Condition2.PNG?width=90pc" alt="14"></li>
-<li>Sau khi cập nhật trust policy, phần <strong>Condition</strong> được bổ sung thông tin Date time được phép thực hiện switch role
-<img src="/images/AssumeRole11-Condition2.PNG?width=90pc" alt="15"></li>
-<li>Trở lại phiên log in của user <strong>asg-user4</strong>, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do thời điểm mà ta thực hiện Switch đã ngoài khoảng thời gian cho phép.
-<img src="/images/AssumeRole9-Condition1.PNG?width=90pc" alt="13"></li>
+<li><a href="5.1-iam-admin-role/">Tạo IAM Role có quyền Quản trị</a></li>
+<li><a href="5.2-create-iam-user/">Tạo IAM User</a></li>
+<li><a href="5.3-configure-switch-role/">Cấu hình Switch role cho IAM User</a></li>
+<li><a href="5.4-condition-ip/">Giới hạn IP được phép Switch role</a></li>
+<li><a href="5.5-condition-time/">Giới hạn Thời gian được phép Switch role</a></li>
 </ul>
 
 
@@ -431,8 +542,6 @@ Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -537,8 +646,93 @@ Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -552,10 +746,10 @@ Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/4-create-group-operate-ec2-and-rds/" title="Tạo Group có quyền operate EC2 và RDS"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/4-create-group-ec2-rds/" title="Tạo Group quản trị"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-what-is-iam/" title="Giới thiệu về IAM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/5-configure-iam-role-with-condition/5.1-iam-admin-role/" title="Tạo IAM Role có quyền Admin" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -565,19 +759,19 @@ Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1625918797"></script>
-    <script src="/js/perfect-scrollbar.min.js?1625918797"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1625918797"></script>
-    <script src="/js/jquery.sticky.js?1625918797"></script>
-    <script src="/js/featherlight.min.js?1625918797"></script>
-    <script src="/js/highlight.pack.js?1625918797"></script>
+    <script src="/js/clipboard.min.js?1625929558"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625929558"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625929558"></script>
+    <script src="/js/jquery.sticky.js?1625929558"></script>
+    <script src="/js/featherlight.min.js?1625929558"></script>
+    <script src="/js/highlight.pack.js?1625929558"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1625918797"></script>
-    <script src="/js/learn.js?1625918797"></script>
-    <script src="/js/hugo-learn.js?1625918797"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625929558"></script>
+    <script src="/js/learn.js?1625929558"></script>
+    <script src="/js/hugo-learn.js?1625929558"></script>
 
-    <link href="/mermaid/mermaid.css?1625918797" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1625918797"></script>
+    <link href="/mermaid/mermaid.css?1625929558" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625929558"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

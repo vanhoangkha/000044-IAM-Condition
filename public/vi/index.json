@@ -1,6 +1,6 @@
 [
 {
-	"uri": "/vi/1-what-is-iam/",
+	"uri": "/vi/1-iam-intro/",
 	"title": "Giới thiệu về IAM",
 	"tags": [],
 	"description": "",
@@ -8,38 +8,73 @@
 },
 {
 	"uri": "/vi/",
-	"title": "IAM Role &amp; Secure Token Service (STS) in AWS Cloud",
+	"title": "IAM Role &amp; Condition",
 	"tags": [],
 	"description": "",
-	"content": "IAM Role \u0026amp; Secure Token Service (STS) trong AWS Cloud  Khái niệm IAM Tạo User có quyền operate EC2 Tạo User có quyền operate RDS Tạo Group có quyền operate cả EC2 và RDS Cấu hình IAM Role theo Điều kiện  "
+	"content": "IAM Role \u0026amp; Condition Ở bài Bắt đầu với IAM chúng ta đã tạo IAM User có quyền admin cho mọi dịch vụ. Trong thực tế chúng ta thường chỉ cấp quyền vừa đủ ( tối thiểu ) cho người quản trị. Trong bài này chúng ta sẽ cùng ôn lại khái niệm về IAM, sau đó tiến hành tạo User/Group đóng vai trò admin từng dịch vụ EC2 , RDS. Bước tiếp theo chúng ta tạo Role và tăng cường tính bảo mật bằng cách đặt thêm điều kiện giới hạn theo địa chỉ IP và thời gian.\n Khái niệm IAM Tạo User quản trị EC2 Tạo User quản trị RDS Tạo Group quản trị Cấu hình IAM Role \u0026amp; Condition  "
 },
 {
-	"uri": "/vi/2-create-user-operate-ec2/",
-	"title": "Tạo User có quyền operate EC2",
+	"uri": "/vi/5-configure-iam-role-with-condition/5.1-iam-admin-role/",
+	"title": "Tạo IAM Role có quyền Admin",
 	"tags": [],
 	"description": "",
-	"content": "Tạo User có quyền operate EC2  Để vận hành bất cứ dịch vụ nào, User cần phải được cấp quyền thông qua policy. Policy được attach cho User có thể là trực tiếp hoặc gián tiếp. Đó là  Cấp quyền cho User thông qua Policy gán cho Group Cấp quyền cho User bằng cách sao chép Policy từ một User khác Cấp quyền cho User bằng cách gán trực tiếp Policy  Các bước thực hiện cụ thể :  Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home Tại cột điều hướng bên trái, chọn User, sau đó bấm Add User Tại trang Details, ta thao tác:  Thông tin User name, nhập asg-user1 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission    Tại trang Permissions, ta thao tác :  Chọn Attach existing policies directly Trong vùng text box của Filter Policies, nhập EC2 rồi chọn AmazonEC2FullAccess  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới    Để tra permissions, ta thực hiện log in vào user mới, chọn dịch vụ EC2 rồi thực hiện tạo một EC2 intance.  "
+	"content": "Tạo IAM Role có quyền Admin   Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home Tại cột điều hướng bên trái, chọn Roles, sau đó bấm Create role Ở phần trusted entity, chọn EC2. Cần làm rõ một chút, trusted entity là thực thể được phép assume role. Mặc dù điều ta muốn là trusted entity là IAM User, tuy nhiên không có lựa chọn trực tiếp cho mong muốn này, do vậy ta chọn EC2.  Bấm Next: Permission. Tại mục Attach permissions policies, chọn AdminstratorAccess  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review Tại trang Review, nhập tên của Role, asg-RoleFullAccess, sau đó bấm Create role để kết thúc quá trình tạo Role   "
 },
 {
-	"uri": "/vi/3-create-user-operate-rds/",
-	"title": "Tạo User có quyền operate RDS",
+	"uri": "/vi/5-configure-iam-role-with-condition/5.2-create-iam-user/",
+	"title": "Tạo IAM User",
 	"tags": [],
 	"description": "",
-	"content": "Tạo User có quyền operate RDS   Tương tự cách tạo User có quyền operate EC2, ở cột điều hướng bên trái, chọn User, sau đó bấm Add User Tại trang Details, ta thao tác:  Thông tin User name, nhập asg-user2 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission   Tại trang Permissions, ta thao tác :  Chọn Attach existing policies directly Trong vùng text box của Filter Policies, nhập RDS rồi chọn AmazonRDSFullAccess và DatabaseAdministrator  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới   Để tra permissions, ta thực hiện log in vào user mới, chọn dịch vụ RDS rồi thực hiện tạo một RDS intance mới.  "
+	"content": "Tạo IAM User   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home Thông tin User name, nhập asg-user4 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset* để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission, tuy nhiên ta bỏ qua bước cấu hình này để thực hiện assume role sau này. Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền truy cập tới dịch vụ nào.   "
 },
 {
-	"uri": "/vi/4-create-group-operate-ec2-and-rds/",
-	"title": "Tạo Group có quyền operate EC2 và RDS",
+	"uri": "/vi/2-create-ec2-admin/",
+	"title": "Tạo User quản trị EC2",
+	"tags": [],
+	"description": "",
+	"content": "Tạo User quản trị dịch vụ EC2  Để vận hành bất cứ dịch vụ nào, User cần phải được cấp quyền thông qua policy. Policy được attach cho User có thể là trực tiếp hoặc gián tiếp. Đó là  Cấp quyền cho User thông qua Policy gán cho Group Cấp quyền cho User bằng cách sao chép Policy từ một User khác Cấp quyền cho User bằng cách gán trực tiếp Policy  Các bước thực hiện cụ thể :  Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home Tại cột điều hướng bên trái, chọn User, sau đó bấm Add User Tại trang Details, ta thao tác:  Thông tin User name, nhập asg-user1 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission    Tại trang Permissions, ta thao tác :  Chọn Attach existing policies directly Trong vùng text box của Filter Policies, nhập EC2 rồi chọn AmazonEC2FullAccess  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới    Để tra permissions, ta thực hiện log in vào user mới, chọn dịch vụ EC2 rồi thực hiện tạo một EC2 intance.  "
+},
+{
+	"uri": "/vi/3-create-rds-admin/",
+	"title": "Tạo User quản trị RDS",
+	"tags": [],
+	"description": "",
+	"content": "Tạo User quản trị dịch vụ RDS   Tương tự cách tạo User có quyền operate EC2, ở cột điều hướng bên trái, chọn User, sau đó bấm Add User Tại trang Details, ta thao tác:  Thông tin User name, nhập asg-user2 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission   Tại trang Permissions, ta thao tác :  Chọn Attach existing policies directly Trong vùng text box của Filter Policies, nhập RDS rồi chọn AmazonRDSFullAccess và DatabaseAdministrator  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới   Để tra permissions, ta thực hiện log in vào user mới, chọn dịch vụ RDS rồi thực hiện tạo một RDS intance mới.  "
+},
+{
+	"uri": "/vi/5-configure-iam-role-with-condition/5.3-configure-switch-role/",
+	"title": "Cấu hình Switch role",
+	"tags": [],
+	"description": "",
+	"content": "Cấu hình Switch role cho IAM User   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home, ở cột điều hướng bên trái, chọn User Bấm vào user mới tạo asg-user4, sao chép thông tin User ARN Tại cột điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo asg-RoleFullAccess, sao chép thông tin Role ARN và Instance Profile ARNs Ở tab Trust relationships, bấm edit trust relationship  Bổ sung AWS với thông tin User ARN như hình bên dưới. Sau đó bấm Update Trust Policy Để kiểm tra assume role, ta thao tác như sau Thực hiện log in user asg-user4, sau đó bấm vào tên của user ở góc phải màn hình, chọn Switch Role  Tại màn hình Switch Role, nhập các thông tin theo yêu cầu bao gồm, Account là Account number, Role là tên của Role, Display name là tên hiển thị cho User sau khi switch role.  Bấm Switch role để thực hiện assume role cho user asg-user4. Thực hiện truy cập các dịch vụ cơ bản như S3 để xác nhận cấu hình Switch role thành công. Hình bên dưới thể hiện asg-user4 sau khi switch role đã có khả năng tạo bucket.   "
+},
+{
+	"uri": "/vi/5-configure-iam-role-with-condition/5.4-condition-ip/",
+	"title": "Giới hạn theo IP",
+	"tags": [],
+	"description": "",
+	"content": "Giới hạn IP được phép Switch role   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home với quyền user Admin Tại cột điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo asg-RoleFullAccess Ở tab Trust relationships, bấm edit trust relationship, bổ sung Condition như bên dưới, sau đó bấm Update Trust Policy  Sau khi cập nhật trust policy, phần Condition được bổ sung thông tin IP được phép thực hiện switch role  Trở lại phiên log in của user asg-user4, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do ta đang truy cập dịch vụ từ thiết bị không có IP như trong điều kiện.   "
+},
+{
+	"uri": "/vi/4-create-group-ec2-rds/",
+	"title": "Tạo Group quản trị",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Group có quyền operate EC2 \u0026amp; RDS   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home Tại cột điều hướng bên trái, chọn Groups, sau đó bấm Create New Group Thông tin Group name, nhập asg-group1 Chuyển sang mục Attach Policy, nhập lần lượt filer \u0026ldquo;EC2\u0026rdquo; và \u0026ldquo;Data\u0026rdquo; để lấy các policy cấp quyền operate EC2 và RDS. Chọn AmazonEC2FullAccess, AmazonRDSFullAccess và DatabaseAdministrator, sau đó bấm Next Step  Tại trang Review, kiểm tra thông tin lại lần cuối cùng, sau đó bấm Create Group để kết thúc quá trình tạo Group  Để kiểm tra permissions đã cấp cho Group, thực hiện tạo User rồi truy cập các dịch vụ tương ứng  Tại cột điều hướng bên trái, chọn User, sau đó bấm Add User Thông tin User name, nhập asg-user3 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset* để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission, chọn Add user to group như mặc định. Bên dưới tích chọn tên Group mới tạo asg-group1.  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới Thực hiện log in vào user mới tạo, chọn dịch vụ EC2 \u0026amp; RDS và thực hiện các thao tác kiểm thử.    "
 },
 {
 	"uri": "/vi/5-configure-iam-role-with-condition/",
-	"title": "Cấu hình IAM Role theo Điều kiện",
+	"title": "Cấu hình IAM Role Condition",
 	"tags": [],
 	"description": "",
-	"content": "Các bước thực hiện:  #### Bước 1: Tạo IAM Role có quyền Quản trị #### Bước 2: Tạo IAM User #### Bước 3: Cấu hình Switch role cho IAM User #### Bước 4: Cấu hình Condition 1 - Giới hạn IP được phép Switch role #### Bước 5: Cấu hình Condition 2 - Giới hạn Thời gian được phép Switch role   Bước 1: Tạo IAM Role có quyền Quản trị   Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home Tại cột điều hướng bên trái, chọn Roles, sau đó bấm Create role Ở phần trusted entity, chọn EC2. Cần làm rõ một chút, trusted entity là thực thể được phép assume role. Mặc dù điều ta muốn là trusted entity là IAM User, tuy nhiên không có lựa chọn trực tiếp cho mong muốn này, do vậy ta chọn EC2.  Bấm Next: Permission. Tại mục Attach permissions policies, chọn AdminstratorAccess  Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review Tại trang Review, nhập tên của Role, asg-RoleFullAccess, sau đó bấm Create role để kết thúc quá trình tạo Role    Bước 2: Tạo IAM User   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home Thông tin User name, nhập asg-user4 Bấm chọn check box cho AWS Management Console access, chọn Custom password, sau đó nhập password vào text box. Tiếp theo, bỏ chọn Require password reset* để không phải thay đổi mật khẩu ở lần Log in đầu tiên Bấm Next: Permission, tuy nhiên ta bỏ qua bước cấu hình này để thực hiện assume role sau này. Bấm Next: Tags để nhập thông tin Tag (nếu cần). Sau đó bấm Next: Review  Bấm Create User. Thực hiện lưu thông tin Access Key ID và Secret Access Key rồi bấm Close để kết thúc quá trình tạo User mới Sau bước khởi tạo này, IAM User mới vẫn chưa có bất cứ quyền truy cập tới dịch vụ nào.    Bước 3: Cấu hình Switch role cho IAM User   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home, ở cột điều hướng bên trái, chọn User Bấm vào user mới tạo asg-user4, sao chép thông tin User ARN Tại cột điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo asg-RoleFullAccess, sao chép thông tin Role ARN và Instance Profile ARNs Ở tab Trust relationships, bấm edit trust relationship  Bổ sung AWS với thông tin User ARN như hình bên dưới. Sau đó bấm Update Trust Policy Để kiểm tra assume role, ta thao tác như sau Thực hiện log in user asg-user4, sau đó bấm vào tên của user ở góc phải màn hình, chọn Switch Role  Tại màn hình Switch Role, nhập các thông tin theo yêu cầu bao gồm, Account là Account number, Role là tên của Role, Display name là tên hiển thị cho User sau khi switch role.  Bấm Switch role để thực hiện assume role cho user asg-user4. Thực hiện truy cập các dịch vụ cơ bản như S3 để xác nhận cấu hình Switch role thành công. Hình bên dưới thể hiện asg-user4 sau khi switch role đã có khả năng tạo bucket.    Bước 4: Cấu hình Condition 1 - Giới hạn IP được phép Switch role   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home với quyền user Admin Tại cột điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo asg-RoleFullAccess Ở tab Trust relationships, bấm edit trust relationship, bổ sung Condition như bên dưới, sau đó bấm Update Trust Policy  Sau khi cập nhật trust policy, phần Condition được bổ sung thông tin IP được phép thực hiện switch role  Trở lại phiên log in của user asg-user4, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do ta đang truy cập dịch vụ từ thiết bị không có IP như trong điều kiện.    Bước 5: Cấu hình Condition 2 - Giới hạn Thời gian được phép Switch role   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home với quyền user Admin Tại cột điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo asg-RoleFullAccess Ở tab Trust relationships, bấm edit trust relationship, bổ sung Condition như bên dưới, sau đó bấm Update Trust Policy  Sau khi cập nhật trust policy, phần Condition được bổ sung thông tin Date time được phép thực hiện switch role  Trở lại phiên log in của user asg-user4, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do thời điểm mà ta thực hiện Switch đã ngoài khoảng thời gian cho phép.   "
+	"content": "Cấu hình IAM Role Condition Việc sử dụng Role là một phương pháp thực hành tốt trong hệ thống AWS. Ở bước này chúng ta không chỉ cấu hình cho phép người dùng sử dụng ( assume ) 1 role cụ thể bất cứ lúc nào mà còn thêm vào các Condition ( điều kiện ). Chỉ khi thỏa điều kiện về địa chỉ IP hoặc thời gian, người dùng mới có thể thực hiện switch role. Để hiểu cách switch role, bạn có thể xem lại bài Bắt đầu với IAM\n Tạo IAM Role có quyền Quản trị Tạo IAM User Cấu hình Switch role cho IAM User Giới hạn IP được phép Switch role Giới hạn Thời gian được phép Switch role  "
+},
+{
+	"uri": "/vi/5-configure-iam-role-with-condition/5.5-condition-time/",
+	"title": "Giới hạn theo Thời gian ",
+	"tags": [],
+	"description": "",
+	"content": "Giới hạn Thời gian được phép Switch role   Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home với quyền user Admin Tại cột điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo asg-RoleFullAccess Ở tab Trust relationships, bấm edit trust relationship, bổ sung Condition như bên dưới, sau đó bấm Update Trust Policy  Sau khi cập nhật trust policy, phần Condition được bổ sung thông tin Date time được phép thực hiện switch role  Trở lại phiên log in của user asg-user4, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do thời điểm mà ta thực hiện Switch đã ngoài khoảng thời gian cho phép.   "
 },
 {
 	"uri": "/vi/categories/",

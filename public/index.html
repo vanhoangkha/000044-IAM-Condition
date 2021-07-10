@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Deploy ShareNote on Windows/Ubuntu Virtual Server :: Deploy ShareNote on Windows/Ubuntu Virtual Server</title>
+    <title>IAM Role &amp; Condition :: Deploy ShareNote on Windows/Ubuntu Virtual Server</title>
 
     
-    <link href="/css/nucleus.css?1625918797" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1625918797" rel="stylesheet">
-    <link href="/css/hybrid.css?1625918797" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1625918797" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1625918797" rel="stylesheet">
-    <link href="/css/auto-complete.css?1625918797" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1625918797" rel="stylesheet">
-    <link href="/css/theme.css?1625918797" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1625918797" rel="stylesheet">
+    <link href="/css/nucleus.css?1625929557" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625929557" rel="stylesheet">
+    <link href="/css/hybrid.css?1625929557" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625929557" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625929557" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625929557" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625929557" rel="stylesheet">
+    <link href="/css/theme.css?1625929557" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625929557" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1625918797" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625929557" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1625918797"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625929557"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1625918797"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1625918797"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625929557"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625929557"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1625918797"></script>
+<script type="text/javascript" src="/js/search.js?1625929557"></script>
 
     
   </div>
@@ -73,6 +73,288 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-iam-intro/" title="Giới thiệu về IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-iam-intro/">
+          <b>1. </b>Giới thiệu về IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-create-ec2-admin/" title="Tạo User quản trị EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-create-ec2-admin/">
+          <b>2. </b>Tạo User quản trị EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-rds-admin/" title="Tạo User quản trị RDS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-rds-admin/">
+          <b>3. </b>Tạo User quản trị RDS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-create-group-ec2-rds/" title="Tạo Group quản trị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-create-group-ec2-rds/">
+          <b>4. </b>Tạo Group quản trị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-configure-iam-role-with-condition/" title="Cấu hình IAM Role Condition" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-configure-iam-role-with-condition/">
+          <b>5. </b>Cấu hình IAM Role Condition
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-configure-iam-role-with-condition/5.1-iam-admin-role/" title="Tạo IAM Role có quyền Admin" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-configure-iam-role-with-condition/5.1-iam-admin-role/">
+          <b>5.1 </b>Tạo IAM Role có quyền Admin
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-configure-iam-role-with-condition/5.2-create-iam-user/" title="Tạo IAM User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-configure-iam-role-with-condition/5.2-create-iam-user/">
+          <b>5.2 </b>Tạo IAM User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-configure-iam-role-with-condition/5.3-configure-switch-role/" title="Cấu hình Switch role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-configure-iam-role-with-condition/5.3-configure-switch-role/">
+          <b>5.3 </b>Cấu hình Switch role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-configure-iam-role-with-condition/5.4-condition-ip/" title="Giới hạn theo IP" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-configure-iam-role-with-condition/5.4-condition-ip/">
+          <b>5.4 </b>Giới hạn theo IP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-configure-iam-role-with-condition/5.5-condition-time/" title="Giới hạn theo Thời gian " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-configure-iam-role-with-condition/5.5-condition-time/">
+          <b>5.5 </b>Giới hạn theo Thời gian 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
           
          
     </ul>
@@ -155,11 +437,11 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7836867&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -188,17 +470,17 @@
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
-           
-	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
+ 
+<h1 id="iam-role--condition">IAM Role &amp; Condition</h1>
+<p>Ở bài <a href="https://000002.awsstudygroup.com/">Bắt đầu với IAM</a> chúng ta đã tạo IAM User có quyền admin cho mọi dịch vụ. Trong thực tế chúng ta thường chỉ cấp quyền vừa đủ ( tối thiểu ) cho người quản trị.
+Trong bài này chúng ta sẽ cùng ôn lại khái niệm về IAM, sau đó tiến hành tạo User/Group đóng vai trò admin từng dịch vụ EC2 , RDS. Bước tiếp theo chúng ta tạo Role và tăng cường tính bảo mật bằng cách đặt thêm điều kiện giới hạn theo địa chỉ IP và thời gian.</p>
+<ol>
+<li><a href="1-iam-intro/">Khái niệm IAM</a></li>
+<li><a href="2-create-ec2-admin/">Tạo User quản trị EC2</a></li>
+<li><a href="3-create-rds-admin/">Tạo User quản trị RDS</a></li>
+<li><a href="4-create-group-ec2-rds/">Tạo Group quản trị</a></li>
+<li><a href="5-configure-iam-role-condition/">Cấu hình IAM Role &amp; Condition</a></li>
+</ol>
 	
   
         
@@ -227,6 +509,171 @@
                     
 
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -237,6 +684,8 @@
 	 
 		
 		
+			<a class="nav nav-next" href="/1-iam-intro/" title="Giới thiệu về IAM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
 	
     </div>
 
@@ -245,19 +694,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1625918797"></script>
-    <script src="/js/perfect-scrollbar.min.js?1625918797"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1625918797"></script>
-    <script src="/js/jquery.sticky.js?1625918797"></script>
-    <script src="/js/featherlight.min.js?1625918797"></script>
-    <script src="/js/highlight.pack.js?1625918797"></script>
+    <script src="/js/clipboard.min.js?1625929557"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625929557"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625929557"></script>
+    <script src="/js/jquery.sticky.js?1625929557"></script>
+    <script src="/js/featherlight.min.js?1625929557"></script>
+    <script src="/js/highlight.pack.js?1625929557"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1625918797"></script>
-    <script src="/js/learn.js?1625918797"></script>
-    <script src="/js/hugo-learn.js?1625918797"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625929557"></script>
+    <script src="/js/learn.js?1625929557"></script>
+    <script src="/js/hugo-learn.js?1625929557"></script>
 
-    <link href="/mermaid/mermaid.css?1625918797" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1625918797"></script>
+    <link href="/mermaid/mermaid.css?1625929557" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625929557"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

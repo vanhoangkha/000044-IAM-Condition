@@ -1,12 +1,12 @@
 +++
-title = "Tạo User có quyền operate RDS"
+title = "Tạo User quản trị RDS"
 date = 2020-05-14T00:38:32+07:00
 weight = 3
 chapter = true
 pre = "<b>3. </b>"
 +++
 
-#  Tạo User có quyền operate RDS
+#  Tạo User quản trị dịch vụ RDS
 ---
 - Tương tự cách tạo User có quyền operate EC2, ở cột điều hướng bên trái, chọn **User**, sau đó bấm **Add User**
 - Tại trang Details, ta thao tác: 
