@@ -1,19 +1,12 @@
 +++
 title = "Tạo IAM Group"
-date = 2020-05-14T00:38:32+07:00
 weight = 2
 chapter = false
 pre = "<b>2. </b>"
 +++
-#### Tổng quan
-
-Ở phần này, bạn sẽ tạo IAM Group có quyền truy cập admin tới cả hai dịch vụ EC2 và RDS. 
-
-**Nội dung:**
-
-- [Tạo IAM Group](#tạo-iam-group)
 
 #### Tạo IAM Group
+Ở phần này, bạn sẽ tạo IAM Group có quyền truy cập admin tới cả hai dịch vụ EC2 và RDS. 
 
 1. Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home
 2. Tại thanh điều hướng bên trái, chọn **User groups**, sau đó bấm **Create group**

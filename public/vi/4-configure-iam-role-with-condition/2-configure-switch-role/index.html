@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình Switch role :: Triển Khai Ứng dụng ShareNote trên Máy ảo Windows/Ubuntu</title>
+    <title>Cấu hình Switch role :: IAM Role &amp; Condition</title>
 
     
-    <link href="/css/nucleus.css?1626075938" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1626075938" rel="stylesheet">
-    <link href="/css/hybrid.css?1626075938" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1626075938" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1626075938" rel="stylesheet">
-    <link href="/css/auto-complete.css?1626075938" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1626075938" rel="stylesheet">
-    <link href="/css/theme.css?1626075938" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1626075938" rel="stylesheet">
+    <link href="/css/nucleus.css?1651905965" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651905965" rel="stylesheet">
+    <link href="/css/hybrid.css?1651905965" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651905965" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651905965" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651905965" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651905965" rel="stylesheet">
+    <link href="/css/theme.css?1651905965" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651905965" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1626075938" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651905965" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1626075938"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651905965"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1626075938"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1626075938"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651905965"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651905965"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1626075938"></script>
+<script type="text/javascript" src="/js/search.js?1651905965"></script>
 
     
   </div>
@@ -94,6 +94,102 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-iam-intro/1.1-request/" title="Request tới AWS service" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-iam-intro/1.1-request/">
+          <b>1.1 </b>Request tới AWS service
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-iam-intro/1.2-authenrequest/" title="Chứng thực các request " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-iam-intro/1.2-authenrequest/">
+          <b>1.2 </b>Chứng thực các request 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-iam-intro/1.3-assumerole/" title="Quá trình assume role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-iam-intro/1.3-assumerole/">
+          <b>1.3 </b>Quá trình assume role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -146,6 +242,74 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-iam-user/3.1-createuser/" title="Tạo các IAM User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-iam-user/3.1-createuser/">
+          <b>3.1 </b>Tạo các IAM User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-iam-user/3.2-verifyuseraccess/" title="Kiểm tra quyền" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-iam-user/3.2-verifyuseraccess/">
+          <b>3.2 </b>Kiểm tra quyền
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -160,13 +324,13 @@
  
   
     
-    <li data-nav-id="/vi/4-configure-iam-role-with-condition/" title="Cấu hình IAM Role Condition" class="dd-item 
+    <li data-nav-id="/vi/4-configure-iam-role-with-condition/" title="Cấu hình Role Condition" class="dd-item 
         parent
         
         
         ">
       <a href="/vi/4-configure-iam-role-with-condition/">
-          <b>4. </b>Cấu hình IAM Role Condition
+          <b>4. </b>Cấu hình Role Condition
           
             <i class="fas fa-check read-icon"></i>
           
@@ -191,13 +355,13 @@
  
   
     
-    <li data-nav-id="/vi/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Tạo IAM Role có quyền Admin" class="dd-item 
+    <li data-nav-id="/vi/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Tạo Admin IAM Role " class="dd-item 
         
         
         
         ">
       <a href="/vi/4-configure-iam-role-with-condition/1-iam-admin-role/">
-          <b>4.1 </b>Tạo IAM Role có quyền Admin
+          <b>4.1 </b>Tạo Admin IAM Role 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -220,7 +384,7 @@
   
     
     <li data-nav-id="/vi/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Cấu hình Switch role" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -259,6 +423,74 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-configure-iam-role-with-condition/3-condition/3.1-ip/" title="Giới hạn truy cập theo IP" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-configure-iam-role-with-condition/3-condition/3.1-ip/">
+          <b>4.3.1 </b>Giới hạn truy cập theo IP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-configure-iam-role-with-condition/3-condition/3.2-timebase/" title="Giới hạn theo thời gian" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-configure-iam-role-with-condition/3-condition/3.2-timebase/">
+          <b>4.3 </b>Giới hạn theo thời gian
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -310,11 +542,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -387,6 +615,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>06-05-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -428,7 +671,7 @@
             
           
           
-            <a href='/vi/'>IAM Role & Condition</a> > <a href='/vi/4-configure-iam-role-with-condition/'>Cấu hình IAM Role Condition</a> > Cấu hình Switch role
+            <a href='/vi/'>IAM Role & Condition</a> > <a href='/vi/4-configure-iam-role-with-condition/'>Cấu hình Role Condition</a> > Cấu hình Switch role
           
         
           
@@ -557,6 +800,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -595,6 +853,75 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
             
             
@@ -660,8 +987,42 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -694,7 +1055,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Tạo IAM Role có quyền Admin"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Tạo Admin IAM Role "> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/4-configure-iam-role-with-condition/3-condition/" title="Giới hạn truy cập role" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -707,19 +1068,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1626075938"></script>
-    <script src="/js/perfect-scrollbar.min.js?1626075938"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1626075938"></script>
-    <script src="/js/jquery.sticky.js?1626075938"></script>
-    <script src="/js/featherlight.min.js?1626075938"></script>
-    <script src="/js/highlight.pack.js?1626075938"></script>
+    <script src="/js/clipboard.min.js?1651905965"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651905965"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651905965"></script>
+    <script src="/js/jquery.sticky.js?1651905965"></script>
+    <script src="/js/featherlight.min.js?1651905965"></script>
+    <script src="/js/highlight.pack.js?1651905965"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1626075938"></script>
-    <script src="/js/learn.js?1626075938"></script>
-    <script src="/js/hugo-learn.js?1626075938"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651905965"></script>
+    <script src="/js/learn.js?1651905965"></script>
+    <script src="/js/hugo-learn.js?1651905965"></script>
 
-    <link href="/mermaid/mermaid.css?1626075938" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1626075938"></script>
+    <link href="/mermaid/mermaid.css?1651905965" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651905965"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

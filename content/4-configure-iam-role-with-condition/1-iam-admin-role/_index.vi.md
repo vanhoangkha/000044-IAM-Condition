@@ -1,16 +1,12 @@
 +++
-title = "Tạo IAM Role có quyền Admin"
-date = 2021
+title = "Tạo Admin IAM Role "
 weight = 1
 chapter = false
 pre = "<b>4.1 </b>"
 +++
 Ở bước này, bạn sẽ tạo một IAM Role có quyền Admin.
 
-**Nội dung:**
-- [Tạo IAM Role](#tạo-iam-role)
-
-#### Tạo IAM Role 
+#### Tạo Admin IAM Role 
 
 1. Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home
 2. Tại thanh điều hướng bên trái, chọn **Roles**, sau đó bấm **Create role**

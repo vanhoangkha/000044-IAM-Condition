@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới thiệu về IAM :: Deploy ShareNote on Windows/Ubuntu Virtual Server</title>
+    <title>Introduction about IAM :: IAM Role &amp; Condition</title>
 
     
-    <link href="/css/nucleus.css?1626075937" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1626075937" rel="stylesheet">
-    <link href="/css/hybrid.css?1626075937" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1626075937" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1626075937" rel="stylesheet">
-    <link href="/css/auto-complete.css?1626075937" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1626075937" rel="stylesheet">
-    <link href="/css/theme.css?1626075937" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1626075937" rel="stylesheet">
+    <link href="/css/nucleus.css?1651905965" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651905965" rel="stylesheet">
+    <link href="/css/hybrid.css?1651905965" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651905965" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651905965" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651905965" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651905965" rel="stylesheet">
+    <link href="/css/theme.css?1651905965" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651905965" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1626075937" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651905965" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1626075937"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651905965"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1626075937"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1626075937"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651905965"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651905965"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1626075937"></script>
+<script type="text/javascript" src="/js/search.js?1651905965"></script>
 
     
   </div>
@@ -82,91 +82,13 @@
  
   
     
-    <li data-nav-id="/1-iam-intro/" title="Giới thiệu về IAM" class="dd-item 
-        
+    <li data-nav-id="/1-iam-intro/" title="Introduction about IAM" class="dd-item 
+        parent
         active
         
         ">
       <a href="/1-iam-intro/">
-          <b>1. </b>Giới thiệu về IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-create-iam-group/" title="Tạo IAM Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-create-iam-group/">
-          <b>2. </b>Tạo IAM Group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-create-iam-user/" title="Tạo IAM User" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-create-iam-user/">
-          <b>3. </b>Tạo IAM User
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configure-iam-role-with-condition/" title="Cấu hình IAM Role Condition" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-configure-iam-role-with-condition/">
-          <b>4. </b>Cấu hình IAM Role Condition
+          <b>1. </b>Introduction about IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -191,13 +113,13 @@
  
   
     
-    <li data-nav-id="/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Tạo IAM Role có quyền Admin" class="dd-item 
+    <li data-nav-id="/1-iam-intro/1.1-request/" title="Request to AWS service" class="dd-item 
         
         
         
         ">
-      <a href="/4-configure-iam-role-with-condition/1-iam-admin-role/">
-          <b>4.1 </b>Tạo IAM Role có quyền Admin
+      <a href="/1-iam-intro/1.1-request/">
+          <b>1.1 </b>Request to AWS service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -219,13 +141,13 @@
  
   
     
-    <li data-nav-id="/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Cấu hình Switch role" class="dd-item 
+    <li data-nav-id="/1-iam-intro/1.2-authenrequest/" title="Authenticate requests" class="dd-item 
         
         
         
         ">
-      <a href="/4-configure-iam-role-with-condition/2-configure-switch-role/">
-          <b>4.2 </b>Cấu hình Switch role
+      <a href="/1-iam-intro/1.2-authenrequest/">
+          <b>1.2 </b>Authenticate requests
           
             <i class="fas fa-check read-icon"></i>
           
@@ -247,13 +169,13 @@
  
   
     
-    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/" title="Giới hạn truy cập role" class="dd-item 
+    <li data-nav-id="/1-iam-intro/1.3-assumerole/" title="assume role process " class="dd-item 
         
         
         
         ">
-      <a href="/4-configure-iam-role-with-condition/3-condition/">
-          <b>4.3 </b>Giới hạn truy cập role
+      <a href="/1-iam-intro/1.3-assumerole/">
+          <b>1.3 </b>assume role process 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -282,13 +204,323 @@
  
   
     
-    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/2-create-iam-group/" title="Create IAM Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-create-iam-group/">
+          <b>2. </b>Create IAM Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-iam-user/" title="Create IAM User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-iam-user/">
+          <b>3. </b>Create IAM User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-iam-user/3.1-createuser/" title="Create IAM Users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-iam-user/3.1-createuser/">
+          <b>3.1 </b>Create IAM Users
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-iam-user/3.2-verifyuseraccess/" title="Check permissions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-iam-user/3.2-verifyuseraccess/">
+          <b>3.2 </b>Check permissions
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/" title="Configure Role Condition" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/">
+          <b>4. </b>Configure Role Condition
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Create Admin IAM Role " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/1-iam-admin-role/">
+          <b>4.1 </b>Create Admin IAM Role 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Configure Switch role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/2-configure-switch-role/">
+          <b>4.2 </b>Configure Switch role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/" title="Restrict role access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/3-condition/">
+          <b>4.3 </b>Restrict role access
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/3.1-ip/" title="Limit switch role by IP " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/3-condition/3.1-ip/">
+          <b>4.3.1 </b>Limit switch role by IP 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/3.2-timebase/" title="Limit switch role by Time " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/3-condition/3.2-timebase/">
+          <b>4.3 </b>Limit switch role by Time 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên
+          <b>5. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,11 +542,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -387,6 +615,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>06-05-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -424,7 +667,7 @@
             
           
           
-            <a href='/'>IAM Role & Condition</a> > Giới thiệu về IAM
+            <a href='/'>IAM Role & Condition</a> > Introduction about IAM
           
         
           
@@ -459,7 +702,7 @@
           
             <h1>
               
-              Giới thiệu về IAM
+              Introduction about IAM
             </h1>
           
 
@@ -467,57 +710,60 @@
 
 
 
-	<h4 id="định-nghĩa-về-iam">Định nghĩa về IAM</h4>
+	<h4 id="definition-of-iam">Definition of IAM</h4>
 <ul>
-<li>Là công cụ kiểm soát cách con người hoặc chương trình sử dụng hạ tầng của AWS</li>
-<li>Vẫn giữ nguyên định nghĩa về xác thực truyền thống như User, Group và chính sách kiểm soát truy cập để kiểm soát AWS account, service</li>
+<li>A tool that controls how people or programs use AWS infrastructure</li>
+<li>Maintain the definition of traditional authentication such as User, Group, and access control policy to control AWS account, service</li>
 </ul>
-<h4 id="ứng-dụng-của-iam">Ứng dụng của IAM</h4>
+<h4 id="application-of-iam">Application of IAM</h4>
 <ul>
-<li>IAM không có khả năng xác thực đối với ứng dụng. Ví dụ ở hệ thống on-prem, 1 ứng dụng như phần mềm sử dụng AD làm hệ thống xác thực, thì khi chuyển lên AWS cloud sẽ cần triển khai 
-AWS Directory Service (cài đặt &amp; migrate). Với hệ thống on-prem có ứng dụng di động, khi chuyển lên cloud sẽ dựng Amazon Coginito để kiểm soát việc xác thực đối với ứng dụng này.</li>
-<li>IAM không có khả năng quản lý xác thực đối với hệ điều hành. Sau khi các máy chủ ở hệ thống on-prem được migrate lên EC2, việc truy cập vào EC2 có thể thông qua AD hoặc LDAP đã được extend từ hệ thống on-prem hoặc chạy standalone.</li>
-<li>Công nghệ xác thực:
+<li>
+<p>IAM does not have the ability to authenticate to the application. For example, in an on-prem system, an application-like software that uses AD as an authentication system, when moving to the AWS cloud, will need to be deployed AWS Directory Service (install &amp; migrate).</p>
+</li>
+<li>
+<p>IAM cannot manage authentication for the operating system. After the servers in the on-prem system are migrated to EC2, access to EC2 can be via AD or LDAP that has been extended from the on-prem system or run standalone.</p>
+</li>
+<li>
+<p>Authentication technology:</p>
 <ul>
-<li>Xác thực truy cập Hệ Điều Hành &raquo;&raquo; AD hoặc LDAP (Light weight Access protocol)</li>
-<li>Xác thực truy cập Ứng dụng &raquo;&raquo; AD hoặc Application User Repo hoặc Amazon Cognito</li>
-<li>Xác thực truy cập AWS Resource &raquo;&raquo; IAM</li>
+<li>Authentication to access Operating System &raquo;&raquo; AD or LDAP (Light weight Access protocol)</li>
+<li>Authenticate Access to Application &raquo;&raquo; AD or Application User Repo or Amazon Cognito</li>
+<li>AWS Resource Access Authentication &raquo;&raquo; IAM
+Like most AWS services, IAM can be controlled through:</li>
 </ul>
 </li>
-<li>Giống như hầu hết các service của AWS, IAM có thể được điểu khiển thông qua:
-<ul>
-<li>AWS Management Console</li>
-<li>CLI - công cụ scripting</li>
-<li>AWS SDKs</li>
-</ul>
+<li>
+<p>AWS Management Console</p>
 </li>
-<li>Một số thao tác quan trọng thường làm với IAM như: Tạo User, Group, Role, Access policy</li>
-</ul>
-<h4 id="một-số-khái-niệm-cơ-bản-liên-quan-đến-iam">Một số khái niệm cơ bản liên quan đến IAM</h4>
-<ul>
-<li><strong>Resource</strong>: tài nguyên thuộc quản lý của IAM. Ví dụ như User, Group, Role hoặc một Identity provider object. Trên IAM có thể thêm xóa sửa bất cứ thành phần tài nguyên nào.</li>
-<li><strong>Identities</strong>: một tài nguyên được quản lý với IAM mà được sử dụng cho việc định danh hoặc phân nhóm. Identities bao gồm User, Group và Role. Một Policy có thể được gán cho một Identities.</li>
-<li><strong>Principal</strong> là một thực thể của IAM, là đối tượng có khả năng tương tác trực tiếp với các AWS resource. 3 loại principal: Root user, IAM user và Role</li>
-</ul>
-<h4 id="một-số-khái-niệm-khác">Một số khái niệm khác</h4>
-<ul>
-<li><strong>Request</strong>: Khi một principal cố gắng thực hiện một thao tác sử dụng AWS Console, AWS API hoặc AWS CLI, principal đó sẽ phải gửi đi một request. Thông tin Request bao gồm
-<ul>
-<li><strong>Action</strong> or <strong>Operation</strong>: hành động mà principal muốn thực hiện.</li>
-<li><strong>Resource</strong>: thông tin tài nguyên sẽ bị tác động</li>
-<li><strong>Principal</strong>: thông tin về người hoặc ứng dụng gửi đi yêu cầu, bao gồm cả thông tin policy đã được attach với principal đó</li>
-<li><strong>Environment data</strong>: thông tin về địa chỉ IP, user agent, trạng thái enable SSL và thời điểm gửi request</li>
-<li><strong>Resource data</strong>: thông tin liên quan đến tài nguyên mà có thể đc request. Ví dụ tên của bảng dữ liệu DynamoDB, hay tên tag của máy ảo EC2</li>
-</ul>
+<li>
+<p>CLI - scripting tool</p>
 </li>
-<li><strong>Authentication</strong>: Một principal phải có khả năng xác thực truy cập để có thể gửi request tới AWS.
-<ul>
-<li>Với <strong>Root user</strong>: khi login cần thông tin địa chỉ email và password</li>
-<li>với <strong>IAM user</strong>: cần thông tin account ID hoặc alias, và user + password tương ứng</li>
-<li>Để xác thực IAM user qua AWS API hay CLI, phải sử dụng <strong>Access key</strong> và <strong>Secret key</strong>.</li>
-</ul>
+<li>
+<p>AWS SDKs</p>
+</li>
+<li>
+<p>Some important operations are often done with IAM such as: Create User, Group, Role, and Access policy</p>
 </li>
 </ul>
+<h4 id="some-basic-concepts-related-to-iam">Some basic concepts related to IAM</h4>
+<ul>
+<li><strong>Resource</strong>: resources under the management of IAM. For example User, Group, Role, or Identity provider object. On IAM, it is possible to add, delete and edit any resource element.</li>
+<li><strong>Identities</strong>: a resource managed with IAM that is used for identification or grouping. Identities include User, Group, and Role. A Policy can be assigned to an Identity.</li>
+<li><strong>Principal</strong> is an instance of IAM, which can interact directly with AWS resources. 3 types of principals: Root user, IAM user, and Role</li>
+</ul>
+<figure><img src="/images/serviceicon.png" width="75pc"/><figcaption>
+            <h4>IAM Role</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li><strong>Policy</strong> defines your permission to access the resources in your AWS account. IAM Policy can be assigned to IAM Group, IAM User, and IAM Role.</li>
+</ul>
+<figure><img src="/images/policy.png" width="75pc"/><figcaption>
+            <h4>IAM Policy</h4>
+        </figcaption>
+</figure>
+
 
 
 
@@ -564,57 +810,6 @@ AWS Directory Service (cài đặt &amp; migrate). Với hệ thống on-prem c�
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -624,6 +819,9 @@ AWS Directory Service (cài đặt &amp; migrate). Với hệ thống on-prem c�
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -664,6 +862,172 @@ AWS Directory Service (cài đặt &amp; migrate). Với hệ thống on-prem c�
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -699,7 +1063,7 @@ AWS Directory Service (cài đặt &amp; migrate). Với hệ thống on-prem c�
 			<a class="nav nav-prev" href="/" title="IAM Role &amp; Condition"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-create-iam-group/" title="Tạo IAM Group" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-iam-intro/1.1-request/" title="Request to AWS service" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -709,19 +1073,19 @@ AWS Directory Service (cài đặt &amp; migrate). Với hệ thống on-prem c�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1626075937"></script>
-    <script src="/js/perfect-scrollbar.min.js?1626075937"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1626075937"></script>
-    <script src="/js/jquery.sticky.js?1626075937"></script>
-    <script src="/js/featherlight.min.js?1626075937"></script>
-    <script src="/js/highlight.pack.js?1626075937"></script>
+    <script src="/js/clipboard.min.js?1651905965"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651905965"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651905965"></script>
+    <script src="/js/jquery.sticky.js?1651905965"></script>
+    <script src="/js/featherlight.min.js?1651905965"></script>
+    <script src="/js/highlight.pack.js?1651905965"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1626075937"></script>
-    <script src="/js/learn.js?1626075937"></script>
-    <script src="/js/hugo-learn.js?1626075937"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651905965"></script>
+    <script src="/js/learn.js?1651905965"></script>
+    <script src="/js/hugo-learn.js?1651905965"></script>
 
-    <link href="/mermaid/mermaid.css?1626075937" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1626075937"></script>
+    <link href="/mermaid/mermaid.css?1651905965" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651905965"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

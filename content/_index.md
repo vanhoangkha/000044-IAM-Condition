@@ -1,21 +1,21 @@
 +++
 title = "IAM Role & Condition"
-date = 2021
 weight = 1
 chapter = false
 +++
 
-# IAM Role & Condition 
+# IAM Role & Condition
 
-#### Tổng quan
-Ở bài [000002 - Bắt đầu với IAM](https://000002.awsstudygroup.com/) chúng ta đã tạo IAM User có quyền admin cho mọi dịch vụ. Trong thực tế chúng ta thường chỉ cấp quyền vừa đủ (quyền tối thiểu - *least privilege*) cho người quản trị.
+#### Overview
+In lesson [Getting started with IAM](https://000002.awsstudygroup.com/) we have created IAM User with admin rights for all services. In practice, we usually only grant sufficient rights (minimum privileges - *least privilege*) to the administrator.
 
-Trong bài này chúng ta sẽ cùng ôn lại khái niệm về IAM, sau đó tiến hành tạo User/Group đóng vai trò admin từng dịch vụ EC2 , RDS. Bước tiếp theo chúng ta tạo Role và tăng cường tính bảo mật bằng cách đặt thêm điều kiện giới hạn theo địa chỉ IP và thời gian.
+In this article, we will review the concept of IAM, then proceed to create a User/Group that plays the role of admin for each EC2 and RDS service. The next step is to create a Role and increase security by setting additional restrictions by IP address and time.
 
-**Nội dung:**
-
-1. [Giới thiệu về IAM](1-iam-intro/)
-2. [Tạo IAM Group](2-create-iam-group/)
-3. [Tạo IAM User](3-create-iam-user/)
-4. [Cấu hình IAM Role & Condition](4-configure-iam-role-with-condition/)
-5. [Dọn dẹp tài nguyên](5-cleanup)
+{{< figure src="../images/serviceicon2.png" title="AWS IAM" width=150pc >}}
+{{< figure src="/images/IAM.png" title="Assume Role Process" width=70% >}}
+#### Content
+1. [Introduction to IAM](1-iam-intro/)
+2. [Create IAM Group](2-create-iam-group/)
+3. [Create IAM User](3-create-iam-user/)
+4. [Configure IAM Role & Condition](4-configure-iam-role-with-condition/)
+5. [Resource Cleanup](5-cleanup)

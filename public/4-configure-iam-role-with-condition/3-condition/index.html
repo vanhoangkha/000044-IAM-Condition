@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới hạn truy cập role :: Deploy ShareNote on Windows/Ubuntu Virtual Server</title>
+    <title>Restrict role access :: IAM Role &amp; Condition</title>
 
     
-    <link href="/css/nucleus.css?1626075937" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1626075937" rel="stylesheet">
-    <link href="/css/hybrid.css?1626075937" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1626075937" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1626075937" rel="stylesheet">
-    <link href="/css/auto-complete.css?1626075937" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1626075937" rel="stylesheet">
-    <link href="/css/theme.css?1626075937" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1626075937" rel="stylesheet">
+    <link href="/css/nucleus.css?1651905965" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651905965" rel="stylesheet">
+    <link href="/css/hybrid.css?1651905965" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651905965" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651905965" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651905965" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651905965" rel="stylesheet">
+    <link href="/css/theme.css?1651905965" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651905965" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1626075937" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651905965" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1626075937"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651905965"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1626075937"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1626075937"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651905965"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651905965"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1626075937"></script>
+<script type="text/javascript" src="/js/search.js?1651905965"></script>
 
     
   </div>
@@ -82,91 +82,13 @@
  
   
     
-    <li data-nav-id="/1-iam-intro/" title="Giới thiệu về IAM" class="dd-item 
+    <li data-nav-id="/1-iam-intro/" title="Introduction about IAM" class="dd-item 
         
         
         
         ">
       <a href="/1-iam-intro/">
-          <b>1. </b>Giới thiệu về IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-create-iam-group/" title="Tạo IAM Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-create-iam-group/">
-          <b>2. </b>Tạo IAM Group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-create-iam-user/" title="Tạo IAM User" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-create-iam-user/">
-          <b>3. </b>Tạo IAM User
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configure-iam-role-with-condition/" title="Cấu hình IAM Role Condition" class="dd-item 
-        parent
-        
-        
-        ">
-      <a href="/4-configure-iam-role-with-condition/">
-          <b>4. </b>Cấu hình IAM Role Condition
+          <b>1. </b>Introduction about IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -191,13 +113,13 @@
  
   
     
-    <li data-nav-id="/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Tạo IAM Role có quyền Admin" class="dd-item 
+    <li data-nav-id="/1-iam-intro/1.1-request/" title="Request to AWS service" class="dd-item 
         
         
         
         ">
-      <a href="/4-configure-iam-role-with-condition/1-iam-admin-role/">
-          <b>4.1 </b>Tạo IAM Role có quyền Admin
+      <a href="/1-iam-intro/1.1-request/">
+          <b>1.1 </b>Request to AWS service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -219,13 +141,13 @@
  
   
     
-    <li data-nav-id="/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Cấu hình Switch role" class="dd-item 
+    <li data-nav-id="/1-iam-intro/1.2-authenrequest/" title="Authenticate requests" class="dd-item 
         
         
         
         ">
-      <a href="/4-configure-iam-role-with-condition/2-configure-switch-role/">
-          <b>4.2 </b>Cấu hình Switch role
+      <a href="/1-iam-intro/1.2-authenrequest/">
+          <b>1.2 </b>Authenticate requests
           
             <i class="fas fa-check read-icon"></i>
           
@@ -247,13 +169,13 @@
  
   
     
-    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/" title="Giới hạn truy cập role" class="dd-item 
+    <li data-nav-id="/1-iam-intro/1.3-assumerole/" title="assume role process " class="dd-item 
         
-        active
+        
         
         ">
-      <a href="/4-configure-iam-role-with-condition/3-condition/">
-          <b>4.3 </b>Giới hạn truy cập role
+      <a href="/1-iam-intro/1.3-assumerole/">
+          <b>1.3 </b>assume role process 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -282,13 +204,323 @@
  
   
     
-    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/2-create-iam-group/" title="Create IAM Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-create-iam-group/">
+          <b>2. </b>Create IAM Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-iam-user/" title="Create IAM User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-iam-user/">
+          <b>3. </b>Create IAM User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-iam-user/3.1-createuser/" title="Create IAM Users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-iam-user/3.1-createuser/">
+          <b>3.1 </b>Create IAM Users
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-iam-user/3.2-verifyuseraccess/" title="Check permissions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-iam-user/3.2-verifyuseraccess/">
+          <b>3.2 </b>Check permissions
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/" title="Configure Role Condition" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/">
+          <b>4. </b>Configure Role Condition
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/1-iam-admin-role/" title="Create Admin IAM Role " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/1-iam-admin-role/">
+          <b>4.1 </b>Create Admin IAM Role 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Configure Switch role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/2-configure-switch-role/">
+          <b>4.2 </b>Configure Switch role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/" title="Restrict role access" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/3-condition/">
+          <b>4.3 </b>Restrict role access
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/3.1-ip/" title="Limit switch role by IP " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/3-condition/3.1-ip/">
+          <b>4.3.1 </b>Limit switch role by IP 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-configure-iam-role-with-condition/3-condition/3.2-timebase/" title="Limit switch role by Time " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-configure-iam-role-with-condition/3-condition/3.2-timebase/">
+          <b>4.3 </b>Limit switch role by Time 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên
+          <b>5. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,11 +542,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -387,6 +615,21 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>06-05-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -428,7 +671,7 @@
             
           
           
-            <a href='/'>IAM Role & Condition</a> > <a href='/4-configure-iam-role-with-condition/'>Cấu hình IAM Role Condition</a> > Giới hạn truy cập role
+            <a href='/'>IAM Role & Condition</a> > <a href='/4-configure-iam-role-with-condition/'>Configure Role Condition</a> > Restrict role access
           
         
           
@@ -465,7 +708,7 @@
           
             <h1>
               
-              Giới hạn truy cập role
+              Restrict role access
             </h1>
           
 
@@ -473,43 +716,13 @@
 
 
 
-	<h4 id="tổng-quan">Tổng quan</h4>
-<p>Ở bước này, bạn cấu hình lại role <strong>lab44-RoleFullAccess</strong> để siết chặt khả năng sử dụng role này theo địa chỉ IP và thờ gian.</p>
-<p><strong>Nội dung:</strong></p>
+	<h4 id="overview">Overview</h4>
+<p>In this step, you reconfigure the <strong>lab44-RoleFullAccess</strong> role to tighten the usability of this role by IP address and time.</p>
+<p><strong>Content:</strong></p>
 <ul>
-<li><a href="#gi%E1%BB%9Bi-h%E1%BA%A1n-ip-%C4%91%C6%B0%E1%BB%A3c-ph%C3%A9p-switch-role">Giới hạn IP được phép Switch role</a></li>
-<li><a href="#gi%E1%BB%9Bi-h%E1%BA%A1n-th%E1%BB%9Di-gian-%C4%91%C6%B0%E1%BB%A3c-ph%C3%A9p-switch-role">Giới hạn Thời gian được phép Switch role</a></li>
+<li><a href="#limit-ip-allowed-switch-role">Limit IP allowed Switch role</a></li>
+<li><a href="#limit-time-allowed-switch-role">Limit Time Allowed Switch role</a></li>
 </ul>
-<h4 id="giới-hạn-ip-được-phép-switch-role">Giới hạn IP được phép Switch role</h4>
-<ol>
-<li>Truy cập trang IAM console ở link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a> với quyền user Admin</li>
-<li>Tại thanh điều hướng bên trái, bấm chọn <strong>Roles</strong>, rồi chọn IAM Role mới tạo <strong>lab44-RoleFullAccess</strong></li>
-<li>Ở tab <strong>Trust relationships</strong>, bấm <strong>Edit trust relationship</strong>, bổ sung <strong>Condition</strong> như bên dưới, sau đó bấm <strong>Update Trust Policy</strong></li>
-</ol>
-<p><img src="/images/4.3_IPCondition.png?width=90pc" alt="4.3_IPCondition"></p>
-<ol start="4">
-<li>Sau khi cập nhật trust policy, phần <strong>Condition</strong> được bổ sung thông tin IP được phép thực hiện switch role</li>
-</ol>
-<p><img src="/images/4.3_IPTrust.png?width=90pc" alt="4.3_IPTrust"></p>
-<ol start="5">
-<li>Trở lại phiên log in của user <strong>No-permission-user</strong>, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do ta đang truy cập dịch vụ từ thiết bị không có IP như trong điều kiện.</li>
-</ol>
-<p><img src="/images/4.3_Error.png?width=90pc" alt="4.3_Error"></p>
-<h4 id="giới-hạn-thời-gian-được-phép-switch-role">Giới hạn Thời gian được phép Switch role</h4>
-<ol>
-<li>Truy cập trang IAM console ở link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a> với quyền user Admin</li>
-<li>Tại thanh điều hướng bên trái, bấm chọn <strong>Roles</strong>, rồi chọn IAM Role mới tạo <strong>lab44-RoleFullAccess</strong></li>
-<li>Ở tab <strong>Trust relationships</strong>, bấm <strong>Edit trust relationship</strong>, bổ sung <strong>Condition</strong> như bên dưới, sau đó bấm <strong>Update Trust Policy</strong></li>
-</ol>
-<p><img src="/images/4.3_TimeCondition.png?width=90pc" alt="4.3_TimeCondition"></p>
-<ol start="4">
-<li>Sau khi cập nhật trust policy, phần <strong>Condition</strong> được bổ sung thông tin Date time được phép thực hiện switch role</li>
-</ol>
-<p><img src="/images/4.3_TimeTrust.png?width=90pc" alt="4.3_TimeTrust"></p>
-<ol start="5">
-<li>Trở lại phiên log in của user <strong>No-permission-user</strong>, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do thời điểm mà ta thực hiện Switch đã ngoài khoảng thời gian cho phép.</li>
-</ol>
-<p><img src="/images/4.3_Error.png?width=90pc" alt="4.3_Error"></p>
 
 
 
@@ -558,6 +771,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -596,6 +824,75 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
             
             
@@ -658,8 +955,45 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -671,9 +1005,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -695,10 +1026,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Cấu hình Switch role"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-configure-iam-role-with-condition/2-configure-switch-role/" title="Configure Switch role"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-cleanup/" title="Dọn dẹp tài nguyên" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/4-configure-iam-role-with-condition/3-condition/3.1-ip/" title="Limit switch role by IP " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -708,19 +1039,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1626075937"></script>
-    <script src="/js/perfect-scrollbar.min.js?1626075937"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1626075937"></script>
-    <script src="/js/jquery.sticky.js?1626075937"></script>
-    <script src="/js/featherlight.min.js?1626075937"></script>
-    <script src="/js/highlight.pack.js?1626075937"></script>
+    <script src="/js/clipboard.min.js?1651905965"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651905965"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651905965"></script>
+    <script src="/js/jquery.sticky.js?1651905965"></script>
+    <script src="/js/featherlight.min.js?1651905965"></script>
+    <script src="/js/highlight.pack.js?1651905965"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1626075937"></script>
-    <script src="/js/learn.js?1626075937"></script>
-    <script src="/js/hugo-learn.js?1626075937"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651905965"></script>
+    <script src="/js/learn.js?1651905965"></script>
+    <script src="/js/hugo-learn.js?1651905965"></script>
 
-    <link href="/mermaid/mermaid.css?1626075937" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1626075937"></script>
+    <link href="/mermaid/mermaid.css?1651905965" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651905965"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
