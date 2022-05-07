@@ -1,9 +1,8 @@
 +++
 title = "Giới hạn theo thời gian"
-date = 2021
-weight = 3
+weight = 2
 chapter = false
-pre = "<b>4.3 </b>"
+pre = "<b>4.3.2 </b>"
 +++
 
 #### Giới hạn Thời gian được phép Switch role

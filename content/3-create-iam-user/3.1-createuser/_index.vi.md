@@ -15,7 +15,7 @@ Sau đây, bạn sẽ được hướng dẫn chi tiết cách khởi tạo IAM 
 
 3. Tại trang **Set user details**, nhập những thông tin sau: 
     - User name: **EC2-admin-user**
-    - Access type: tick vào **AWS Management Console cccess** để cho phép user truy cập vào AWS Management Console
+    - Access type: tick vào **AWS Management Console access** để cho phép user truy cập vào AWS Management Console
     - Console password: chọn **Custom password** và nhập mật khẩu tùy thích cho user
     - Require password reset: bỏ chọn lựa chọn này để user không cần phải đổi mật khẩu khi đăng nhập lần đầu
     - Kiểm tra và chọn **Next: Permissions**

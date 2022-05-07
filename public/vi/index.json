@@ -1,12 +1,5 @@
 [
 {
-	"uri": "/vi/",
-	"title": "IAM Role &amp; Condition",
-	"tags": [],
-	"description": "",
-	"content": "IAM Role \u0026amp; Condition Tổng quan Ở bài Bắt đầu với IAM chúng ta đã tạo IAM User có quyền admin cho mọi dịch vụ. Trong thực tế chúng ta thường chỉ cấp quyền vừa đủ (quyền tối thiểu - least privilege) cho người quản trị.\nTrong bài này chúng ta sẽ cùng ôn lại khái niệm về IAM, sau đó tiến hành tạo User/Group đóng vai trò admin từng dịch vụ EC2 , RDS. Bước tiếp theo chúng ta tạo Role và tăng cường tính bảo mật bằng cách đặt thêm điều kiện giới hạn theo địa chỉ IP và thời gian.\n AWS IAM    Assume Role Process   Nội dung  Giới thiệu về IAM Tạo IAM Group Tạo IAM User Cấu hình IAM Role \u0026amp; Condition Dọn dẹp tài nguyên  "
-},
-{
 	"uri": "/vi/4-configure-iam-role-with-condition/3-condition/3.1-ip/",
 	"title": "Giới hạn truy cập theo IP",
 	"tags": [],
@@ -19,6 +12,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Định nghĩa về IAM  Là công cụ kiểm soát cách con người hoặc chương trình sử dụng hạ tầng của AWS Vẫn giữ nguyên định nghĩa về xác thực truyền thống như User, Group và chính sách kiểm soát truy cập để kiểm soát AWS account, service  Ứng dụng của IAM   IAM không có khả năng xác thực đối với ứng dụng. Ví dụ ở hệ thống on-prem, 1 ứng dụng như phần mềm sử dụng AD làm hệ thống xác thực, thì khi chuyển lên AWS cloud sẽ cần triển khai AWS Directory Service (cài đặt \u0026amp; migrate).\n  IAM không có khả năng quản lý xác thực đối với hệ điều hành. Sau khi các máy chủ ở hệ thống on-prem được migrate lên EC2, việc truy cập vào EC2 có thể thông qua AD hoặc LDAP đã được extend từ hệ thống on-prem hoặc chạy standalone.\n  Công nghệ xác thực:\n Xác thực truy cập Hệ Điều Hành \u0026raquo;\u0026raquo; AD hoặc LDAP (Light weight Access protocol) Xác thực truy cập Ứng dụng \u0026raquo;\u0026raquo; AD hoặc Application User Repo hoặc Amazon Cognito Xác thực truy cập AWS Resource \u0026raquo;\u0026raquo; IAM    Giống như hầu hết các service của AWS, IAM có thể được điểu khiển thông qua:\n AWS Management Console CLI - công cụ scripting AWS SDKs    Một số thao tác quan trọng thường làm với IAM như: Tạo User, Group, Role, Access policy\n  Một số khái niệm cơ bản liên quan đến IAM  Resource: tài nguyên thuộc quản lý của IAM. Ví dụ như User, Group, Role hoặc một Identity provider object. Trên IAM có thể thêm xóa sửa bất cứ thành phần tài nguyên nào. Identities: một tài nguyên được quản lý với IAM mà được sử dụng cho việc định danh hoặc phân nhóm. Identities bao gồm User, Group và Role. Một Policy có thể được gán cho một Identities. Principal là một thực thể của IAM, là đối tượng có khả năng tương tác trực tiếp với các AWS resource. 3 loại principal: Root user, IAM user và Role   IAM Role    Policy cấp quyền cho phép bạn truy cập các tài nguyên trong AWS account của bạn. IAM Policy có thể gán cho IAM Group, IAM User và IAM Role.   IAM Policy   "
+},
+{
+	"uri": "/vi/",
+	"title": "IAM Role &amp; Condition",
+	"tags": [],
+	"description": "",
+	"content": "IAM Role \u0026amp; Condition Tổng quan Ở bài Bắt đầu với IAM chúng ta đã tạo IAM User có quyền admin cho mọi dịch vụ. Trong thực tế chúng ta thường chỉ cấp quyền vừa đủ (quyền tối thiểu - least privilege) cho người quản trị.\nTrong bài này chúng ta sẽ cùng ôn lại khái niệm về IAM, sau đó tiến hành tạo User/Group đóng vai trò admin từng dịch vụ EC2 , RDS. Bước tiếp theo chúng ta tạo Role và tăng cường tính bảo mật bằng cách đặt thêm điều kiện giới hạn theo địa chỉ IP và thời gian.\n AWS IAM    Assume Role Process   Nội dung  Giới thiệu về IAM Tạo IAM Group Tạo IAM User Cấu hình IAM Role \u0026amp; Condition Dọn dẹp tài nguyên  "
 },
 {
 	"uri": "/vi/1-iam-intro/1.1-request/",
@@ -39,7 +39,7 @@
 	"title": "Tạo các IAM User",
 	"tags": [],
 	"description": "",
-	"content": "Tạo các IAM User Sau đây, bạn sẽ được hướng dẫn chi tiết cách khởi tạo IAM user, cụ thể là user EC2-admin-user. Với các user còn lại, bạn sẽ có hướng dẫn chung về thông số khởi tạo.\n Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home Ở thanh điều hướng bên trái, chọn User, sau đó bấm Add User  Tại trang Set user details, nhập những thông tin sau:  User name: EC2-admin-user Access type: tick vào AWS Management Console cccess để cho phép user truy cập vào AWS Management Console Console password: chọn Custom password và nhập mật khẩu tùy thích cho user Require password reset: bỏ chọn lựa chọn này để user không cần phải đổi mật khẩu khi đăng nhập lần đầu Kiểm tra và chọn Next: Permissions    Tại trang Set permissions, ta thao tác:  Chọn Attach existing policies directly để chọn phương pháp gán quyền trực tiếp cho user. Trong vùng search box bên cạnh Filter Policies, tìm và chọn AmazonEC2FullAccess Kiểm tra và chọn Next: Tags     Tại trang Add tags (optional), giữ nguyên mặc định và chọn Next: Review\n  Tại trang Review, kiểm tra thông tin và chọn Create user\n  Khi quá trình khởi tạo hoàn thành, nhấn Close để trở về IAM Console.\n  Như vậy, bạn đã hoàn thành bước khởi tạo user. Để tạo các user còn lại, bạn cần lặp lại quy trình trên với thông số khác biệt sau cho bước 3 và 4:\n RDS-admin-user:  Bước 3: Tại trang Set user details, nhập những thông tin sau:  User name: RDS-admin-user   Bước 4: trang Set permissions, thao tác:  Chọn Attach existing policies directly Chọn AmazonRDSFullAccess và DatabaseAdministrator     Group-user:  Bước 3: Tại trang Set user details, nhập những thông tin sau:  User name: Group-user   Bước 4: trang Set permissions, thao tác:  Chọn Add user to group Tick vào group ec2-rds-admin-group     No-permission-user:  Bước 3: Tại trang Set user details, nhập những thông tin sau:  User name: No-permission-user   Bước 4: bỏ qua và chọn Next: Tags    "
+	"content": "Tạo các IAM User Sau đây, bạn sẽ được hướng dẫn chi tiết cách khởi tạo IAM user, cụ thể là user EC2-admin-user. Với các user còn lại, bạn sẽ có hướng dẫn chung về thông số khởi tạo.\n Đăng nhập vào IAM console theo link https://console.aws.amazon.com/iam/home#/home Ở thanh điều hướng bên trái, chọn User, sau đó bấm Add User  Tại trang Set user details, nhập những thông tin sau:  User name: EC2-admin-user Access type: tick vào AWS Management Console access để cho phép user truy cập vào AWS Management Console Console password: chọn Custom password và nhập mật khẩu tùy thích cho user Require password reset: bỏ chọn lựa chọn này để user không cần phải đổi mật khẩu khi đăng nhập lần đầu Kiểm tra và chọn Next: Permissions    Tại trang Set permissions, ta thao tác:  Chọn Attach existing policies directly để chọn phương pháp gán quyền trực tiếp cho user. Trong vùng search box bên cạnh Filter Policies, tìm và chọn AmazonEC2FullAccess Kiểm tra và chọn Next: Tags     Tại trang Add tags (optional), giữ nguyên mặc định và chọn Next: Review\n  Tại trang Review, kiểm tra thông tin và chọn Create user\n  Khi quá trình khởi tạo hoàn thành, nhấn Close để trở về IAM Console.\n  Như vậy, bạn đã hoàn thành bước khởi tạo user. Để tạo các user còn lại, bạn cần lặp lại quy trình trên với thông số khác biệt sau cho bước 3 và 4:\n RDS-admin-user:  Bước 3: Tại trang Set user details, nhập những thông tin sau:  User name: RDS-admin-user   Bước 4: trang Set permissions, thao tác:  Chọn Attach existing policies directly Chọn AmazonRDSFullAccess và DatabaseAdministrator     Group-user:  Bước 3: Tại trang Set user details, nhập những thông tin sau:  User name: Group-user   Bước 4: trang Set permissions, thao tác:  Chọn Add user to group Tick vào group ec2-rds-admin-group     No-permission-user:  Bước 3: Tại trang Set user details, nhập những thông tin sau:  User name: No-permission-user   Bước 4: bỏ qua và chọn Next: Tags    "
 },
 {
 	"uri": "/vi/4-configure-iam-role-with-condition/2-configure-switch-role/",
@@ -56,6 +56,13 @@
 	"content": "Chứng thực các request tới AWS service  Authentication: Một principal phải có khả năng xác thực truy cập để có thể gửi request tới AWS.  Với Root user: khi login cần thông tin địa chỉ email và password. ( thông tin chứng thực dài hạn) với IAM user: cần thông tin account ID hoặc alias, và user + password tương ứng. ( thông tin chứng thực dài hạn) Để xác thực IAM user qua AWS API hay CLI, chúng ta có thể sử dụng Access key và Secret access key ( thông tin chứng thực dài hạn) hoặc sử dụng IAM Role và thông tin chứng thực tạm thời được cấp khi chúng ta thực hiện thao tác assume role thông qua dịch vụ AWS Security Token Service (AWS STS)     AWS STS   "
 },
 {
+	"uri": "/vi/4-configure-iam-role-with-condition/3-condition/3.2-timebase/",
+	"title": "Giới hạn theo thời gian",
+	"tags": [],
+	"description": "",
+	"content": "Giới hạn Thời gian được phép Switch role  Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home với quyền user Admin Tại thanh điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo lab44-RoleFullAccess Ở tab Trust relationships, bấm Edit trust relationship, bổ sung Condition như bên dưới, sau đó bấm Update Trust Policy  Sau khi cập nhật trust policy, phần Condition được bổ sung thông tin Date time được phép thực hiện switch role  Trở lại phiên log in của user No-permission-user, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do thời điểm mà ta thực hiện Switch đã ngoài khoảng thời gian cho phép.  "
+},
+{
 	"uri": "/vi/3-create-iam-user/3.2-verifyuseraccess/",
 	"title": "Kiểm tra quyền",
 	"tags": [],
@@ -68,13 +75,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Tạo IAM Group Ở phần này, bạn sẽ tạo IAM Group có quyền truy cập admin tới cả hai dịch vụ EC2 và RDS.\n Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home Tại thanh điều hướng bên trái, chọn User groups, sau đó bấm Create group  Tại trang Create user group, nhập các thông tin sau:  User group name: ec2-rds-admin-group Cuốn xuống mục Attach permissions policies - Optional, tìm và chọn các policy AmazonEC2FullAccess, AmazonRDSFullAccess và DatabaseAdministrator Kiểm tra và bấm Create group    Như vậy, bạn đã tạo thành công IAM Group.\n"
-},
-{
-	"uri": "/vi/4-configure-iam-role-with-condition/3-condition/3.2-timebase/",
-	"title": "Giới hạn theo thời gian",
-	"tags": [],
-	"description": "",
-	"content": "Giới hạn Thời gian được phép Switch role  Truy cập trang IAM console ở link https://console.aws.amazon.com/iam/home#/home với quyền user Admin Tại thanh điều hướng bên trái, bấm chọn Roles, rồi chọn IAM Role mới tạo lab44-RoleFullAccess Ở tab Trust relationships, bấm Edit trust relationship, bổ sung Condition như bên dưới, sau đó bấm Update Trust Policy  Sau khi cập nhật trust policy, phần Condition được bổ sung thông tin Date time được phép thực hiện switch role  Trở lại phiên log in của user No-permission-user, thực hiện lại việc switch role ta sẽ nhận được thông báo lỗi như hình bên dưới do thời điểm mà ta thực hiện Switch đã ngoài khoảng thời gian cho phép.  "
 },
 {
 	"uri": "/vi/4-configure-iam-role-with-condition/3-condition/",
