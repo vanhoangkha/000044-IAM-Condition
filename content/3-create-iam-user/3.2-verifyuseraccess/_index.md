@@ -12,11 +12,11 @@ Here, you will be guided in detail on how to log in to IAM User, specifically us
 2. In the left navigation bar, select **User**
 3. Select **EC2-admin-user**
 
-![3_UserInfo](/images/3_UserInfo.png?width=90pc)
+![3_UserInfo](/images/3_UserInfo.png?featherlight=false&width=90pc)
 
 4. Select the **Security credentials** tab, copy the link to login for the user next to **Summary**
 
-![3_Link](/images/3_Link.png?width=90pc)
+![3_Link](/images/3_Link.png?featherlight=false&width=90pc)
 
 5. Open a browser tab in incognito mode or open a different browser than the browser you are using. Then, access the link just copied above.
 

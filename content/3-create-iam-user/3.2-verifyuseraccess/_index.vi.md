@@ -12,11 +12,11 @@ Sau đây, bạn sẽ được hướng dẫn chi tiết cách đăng nhập và
 2. Ở thanh điều hướng bên trái, chọn **User**
 3. Chọn vào **EC2-admin-user**
 
-![3_UserInfo](/images/3_UserInfo.png?width=90pc)
+![3_UserInfo](/images/3_UserInfo.png?featherlight=false&featherlight=false&width=90pc)
 
 4. Chọn vào tab **Security credentials**, copy đường link để đăng nhập cho user ở bên cạnh **Summary**
 
-![3_Link](/images/3_Link.png?width=90pc)
+![3_Link](/images/3_Link.png?featherlight=false&featherlight=false&width=90pc)
 
 5. Mở một tab broswer ở chế độ ẩn danh hoặc mở một broswer khác với broswer bạn đang sử dụng. Sau đó, truy cập vào đường link vừa copy ở trên.
 
