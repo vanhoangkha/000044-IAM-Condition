@@ -67,7 +67,7 @@
 	"title": "Create IAM Group",
 	"tags": [],
 	"description": "",
-	"content": "Create IAM Group In this section, you will create an IAM Group with admin access to both EC2 and RDS services.\n Access the IAM console page at the link https://console.aws.amazon.com/iam/home#/home In the left navigation bar, select User groups, then click Create group  At the Create user group page, enter the following information:  User group name: ec2-rds-admin-group Scroll down to Attach permissions policies - Optional, find and select AmazonEC2FullAccess, AmazonRDSFullAccess and DatabaseAdministrator policies Check and click Create group    Thus, you have successfully created the IAM Group.\n"
+	"content": "Create an IAM Group In this section, you will create an IAM Group with administrative access to both EC2 and RDS services.\n Navigate to the IAM console at the following link: IAM Console. In the left-hand navigation pane, select User groups, and then click Create group.  On the Create user group page, enter the following information:  User group name: ec2-rds-admin-group Scroll down to the Attach permissions policies - Optional section, search for and select the policies AmazonEC2FullAccess, AmazonRDSFullAccess, and DatabaseAdministrator. Review and click Create group.    Congratulations, you have successfully created an IAM Group.\n"
 },
 {
 	"uri": "/4-configure-iam-role-with-condition/3-condition/3.2-timebase/",
@@ -88,7 +88,7 @@
 	"title": "Create IAM User",
 	"tags": [],
 	"description": "",
-	"content": "Overview In this section, you will create four IAM Users with the following names and purposes:\n EC2-admin-user: this is the user assigned administrative rights when accessing EC2 services. RDS-admin-user: this is the user assigned administrative rights when accessing RDS services. Group-user: this is the user assigned administrative rights through the IAM User Group created in part 2. No-permission-user: this is a user with no permissions at all. This user will be used to accept the IAM role with Admin rights in part 4.  Content  Create IAM Users Check User Permissions  "
+	"content": "Overview In this section, you will create four IAM Users with the following names and purposes:\n EC2-admin-user: This user is assigned administrative privileges for accessing services within EC2. RDS-admin-user: This user is assigned administrative privileges for accessing services within RDS. Group-user: This user is granted administrative privileges through an IAM User Group created in section 2. No-permission-user: This user has no permissions at all. It will be used to assume an IAM role with Admin privileges in section 4.  Contents  Create IAM Users Verify User Access Rights  "
 },
 {
 	"uri": "/4-configure-iam-role-with-condition/3-condition/",

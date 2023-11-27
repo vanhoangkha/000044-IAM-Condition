@@ -12,21 +12,21 @@
     <title>Tạo các IAM User :: IAM ROLE &amp; CONDITION</title>
 
     
-    <link href="/css/nucleus.css?1680802039" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680802039" rel="stylesheet">
-    <link href="/css/hybrid.css?1680802039" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680802039" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680802039" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680802039" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680802039" rel="stylesheet">
-    <link href="/css/theme.css?1680802039" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680802039" rel="stylesheet">
+    <link href="/css/nucleus.css?1701073599" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1701073599" rel="stylesheet">
+    <link href="/css/hybrid.css?1701073599" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1701073599" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1701073599" rel="stylesheet">
+    <link href="/css/auto-complete.css?1701073599" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1701073599" rel="stylesheet">
+    <link href="/css/theme.css?1701073599" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1701073599" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680802039" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1701073599" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680802039"></script>
+    <script src="/js/jquery-3.3.1.min.js?1701073599"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680802039"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680802039"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1701073599"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1701073599"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680802039"></script>
+<script type="text/javascript" src="/js/search.js?1701073599"></script>
 
     
   </div>
@@ -623,7 +623,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-04-2023</font></i>
+        <i><font color=orange>27-11-2023</font></i>
     </left>
     <left>
         <br>
@@ -720,86 +720,86 @@
 
 
 
-	<h4 id="tạo-các-iam-user">Tạo các IAM User</h4>
-<p>Sau đây, bạn sẽ được hướng dẫn chi tiết cách khởi tạo IAM user, cụ thể là user <strong>EC2-admin-user</strong>. Với các user còn lại, bạn sẽ có hướng dẫn chung về thông số khởi tạo.</p>
+	<h4 id="creating-iam-users">Creating IAM Users</h4>
+<p>Here, you will be guided on how to create IAM users, specifically the user <strong>EC2-admin-user</strong>. For other users, you will have general instructions for the setup.</p>
 <ol>
-<li>Đăng nhập vào <strong>IAM console</strong> theo link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a></li>
-<li>Ở thanh điều hướng bên trái, chọn <strong>User</strong>, sau đó bấm <strong>Add User</strong></li>
+<li>Log in to the <strong>IAM console</strong> using the link: <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a></li>
+<li>In the left navigation pane, select <strong>Users</strong>, and then click <strong>Add User</strong>.</li>
 </ol>
 <p><img src="/images/3_AddUser.png?width=90pc" alt="3_AddUser"></p>
 <ol start="3">
-<li>Tại trang <strong>Set user details</strong>, nhập những thông tin sau:
+<li>On the <strong>Set user details</strong> page, enter the following information:
 <ul>
 <li>User name: <strong>EC2-admin-user</strong></li>
-<li>Access type: tick vào <strong>AWS Management Console access</strong> để cho phép user truy cập vào AWS Management Console</li>
-<li>Console password: chọn <strong>Custom password</strong> và nhập mật khẩu tùy thích cho user</li>
-<li>Require password reset: bỏ chọn lựa chọn này để user không cần phải đổi mật khẩu khi đăng nhập lần đầu</li>
-<li>Kiểm tra và chọn <strong>Next: Permissions</strong></li>
+<li>Access type: Check <strong>AWS Management Console access</strong> to allow user access to the AWS Management Console.</li>
+<li>Console password: Choose <strong>Custom password</strong> and set a password of your choice for the user.</li>
+<li>Require password reset: Uncheck this option to avoid the user changing their password on the first login.</li>
+<li>Review and click <strong>Next: Permissions</strong>.</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/3_SetDetails.png?width=90pc" alt="3_SetDetails"></p>
 <ol start="4">
-<li>Tại trang <strong>Set permissions</strong>, ta thao tác:
+<li>On the <strong>Set permissions</strong> page, perform the following steps:
 <ul>
-<li>Chọn <strong>Attach existing policies directly</strong> để chọn phương pháp gán quyền trực tiếp cho user.</li>
-<li>Trong vùng search box bên cạnh <strong>Filter Policies</strong>, tìm và chọn <strong>AmazonEC2FullAccess</strong></li>
-<li>Kiểm tra và chọn <strong>Next: Tags</strong></li>
+<li>Select <strong>Attach existing policies directly</strong> to assign permissions directly to the user.</li>
+<li>In the search box next to <strong>Filter Policies</strong>, search for and select <strong>AmazonEC2FullAccess</strong>.</li>
+<li>Review and click <strong>Next: Tags</strong>.</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/3_SetPermission.png?width=90pc" alt="3_SetPermission"></p>
 <ol start="5">
 <li>
-<p>Tại trang <strong>Add tags (optional)</strong>, giữ nguyên mặc định và chọn <strong>Next: Review</strong></p>
+<p>On the <strong>Add tags (optional)</strong> page, leave the defaults and click <strong>Next: Review</strong>.</p>
 </li>
 <li>
-<p>Tại trang <strong>Review</strong>, kiểm tra thông tin và chọn <strong>Create user</strong></p>
+<p>On the <strong>Review</strong> page, review the information and click <strong>Create user</strong>.</p>
 </li>
 <li>
-<p>Khi quá trình khởi tạo hoàn thành, nhấn <strong>Close</strong> để trở về IAM Console.</p>
+<p>Once the user creation process is complete, click <strong>Close</strong> to return to the IAM Console.</p>
 </li>
 </ol>
-<p>Như vậy, bạn đã hoàn thành bước khởi tạo user. Để tạo các user còn lại, bạn cần lặp lại quy trình trên với thông số khác biệt sau cho <strong>bước 3 và 4</strong>:</p>
+<p>You have successfully created the user. To create other users, follow the same procedure with different settings for <strong>Step 3 and 4</strong>:</p>
 <ul>
 <li><strong>RDS-admin-user</strong>:
 <ul>
-<li><strong>Bước 3</strong>: Tại trang <strong>Set user details</strong>, nhập những thông tin sau:
+<li><strong>Step 3</strong>: On the <strong>Set user details</strong> page, enter the following information:
 <ul>
 <li>User name: <strong>RDS-admin-user</strong></li>
 </ul>
 </li>
-<li><strong>Bước 4</strong>: trang <strong>Set permissions</strong>, thao tác:
+<li><strong>Step 4</strong>: On the <strong>Set permissions</strong> page, do the following:
 <ul>
-<li>Chọn <strong>Attach existing policies directly</strong></li>
-<li>Chọn <strong>AmazonRDSFullAccess</strong> và <strong>DatabaseAdministrator</strong></li>
+<li>Select <strong>Attach existing policies directly</strong>.</li>
+<li>Choose <strong>AmazonRDSFullAccess</strong> and <strong>DatabaseAdministrator</strong>.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><strong>Group-user</strong>:
 <ul>
-<li><strong>Bước 3</strong>: Tại trang <strong>Set user details</strong>, nhập những thông tin sau:
+<li><strong>Step 3</strong>: On the <strong>Set user details</strong> page, enter the following information:
 <ul>
 <li>User name: <strong>Group-user</strong></li>
 </ul>
 </li>
-<li><strong>Bước 4</strong>: trang <strong>Set permissions</strong>, thao tác:
+<li><strong>Step 4</strong>: On the <strong>Set permissions</strong> page, do the following:
 <ul>
-<li>Chọn <strong>Add user to group</strong></li>
-<li>Tick vào group <strong>ec2-rds-admin-group</strong></li>
+<li>Select <strong>Add user to group</strong>.</li>
+<li>Check the group <strong>ec2-rds-admin-group</strong>.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><strong>No-permission-user</strong>:
 <ul>
-<li><strong>Bước 3</strong>: Tại trang <strong>Set user details</strong>, nhập những thông tin sau:
+<li><strong>Step 3</strong>: On the <strong>Set user details</strong> page, enter the following information:
 <ul>
 <li>User name: <strong>No-permission-user</strong></li>
 </ul>
 </li>
-<li><strong>Bước 4</strong>: bỏ qua và chọn <strong>Next: Tags</strong></li>
+<li><strong>Step 4</strong>: Skip the permissions and click <strong>Next: Tags</strong>.</li>
 </ul>
 </li>
 </ul>
@@ -1116,19 +1116,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680802039"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680802039"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680802039"></script>
-    <script src="/js/jquery.sticky.js?1680802039"></script>
-    <script src="/js/featherlight.min.js?1680802039"></script>
-    <script src="/js/highlight.pack.js?1680802039"></script>
+    <script src="/js/clipboard.min.js?1701073599"></script>
+    <script src="/js/perfect-scrollbar.min.js?1701073599"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1701073599"></script>
+    <script src="/js/jquery.sticky.js?1701073599"></script>
+    <script src="/js/featherlight.min.js?1701073599"></script>
+    <script src="/js/highlight.pack.js?1701073599"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680802039"></script>
-    <script src="/js/learn.js?1680802039"></script>
-    <script src="/js/hugo-learn.js?1680802039"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1701073599"></script>
+    <script src="/js/learn.js?1701073599"></script>
+    <script src="/js/hugo-learn.js?1701073599"></script>
 
-    <link href="/mermaid/mermaid.css?1680802039" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680802039"></script>
+    <link href="/mermaid/mermaid.css?1701073599" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1701073599"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Create IAM Group :: IAM ROLE &amp; CONDITION</title>
 
     
-    <link href="/css/nucleus.css?1680802039" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680802039" rel="stylesheet">
-    <link href="/css/hybrid.css?1680802039" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680802039" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680802039" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680802039" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680802039" rel="stylesheet">
-    <link href="/css/theme.css?1680802039" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680802039" rel="stylesheet">
+    <link href="/css/nucleus.css?1701073599" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1701073599" rel="stylesheet">
+    <link href="/css/hybrid.css?1701073599" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1701073599" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1701073599" rel="stylesheet">
+    <link href="/css/auto-complete.css?1701073599" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1701073599" rel="stylesheet">
+    <link href="/css/theme.css?1701073599" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1701073599" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680802039" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1701073599" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680802039"></script>
+    <script src="/js/jquery-3.3.1.min.js?1701073599"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680802039"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680802039"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1701073599"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1701073599"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680802039"></script>
+<script type="text/javascript" src="/js/search.js?1701073599"></script>
 
     
   </div>
@@ -623,7 +623,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-04-2023</font></i>
+        <i><font color=orange>27-11-2023</font></i>
     </left>
     <left>
         <br>
@@ -714,24 +714,24 @@
 
 
 
-	<h4 id="create-iam-group">Create IAM Group</h4>
-<p>In this section, you will create an IAM Group with admin access to both EC2 and RDS services.</p>
+	<h4 id="create-an-iam-group">Create an IAM Group</h4>
+<p>In this section, you will create an IAM Group with administrative access to both EC2 and RDS services.</p>
 <ol>
-<li>Access the IAM console page at the link <a href="https://console.aws.amazon.com/iam/home#/home">https://console.aws.amazon.com/iam/home#/home</a></li>
-<li>In the left navigation bar, select <strong>User groups</strong>, then click <strong>Create group</strong></li>
+<li>Navigate to the IAM console at the following link: <a href="https://console.aws.amazon.com/iam/home#/home">IAM Console</a>.</li>
+<li>In the left-hand navigation pane, select <strong>User groups</strong>, and then click <strong>Create group</strong>.</li>
 </ol>
 <p><img src="/images/2_CreateGroup.png?width=90pc" alt="2_CreateGroup"></p>
 <ol start="3">
-<li>At the <strong>Create user group</strong> page, enter the following information:
+<li>On the <strong>Create user group</strong> page, enter the following information:
 <ul>
 <li>User group name: <strong>ec2-rds-admin-group</strong></li>
-<li>Scroll down to <strong>Attach permissions policies - Optional</strong>, find and select <strong>AmazonEC2FullAccess</strong>, <strong>AmazonRDSFullAccess</strong> and <strong>DatabaseAdministrator</strong> policies</li>
-<li>Check and click <strong>Create group</strong></li>
+<li>Scroll down to the <strong>Attach permissions policies - Optional</strong> section, search for and select the policies <strong>AmazonEC2FullAccess</strong>, <strong>AmazonRDSFullAccess</strong>, and <strong>DatabaseAdministrator</strong>.</li>
+<li>Review and click <strong>Create group</strong>.</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/2_GroupPolicy.png?width=90pc" alt="2_GroupPolicy"></p>
-<p>Thus, you have successfully created the IAM Group.</p>
+<p>Congratulations, you have successfully created an IAM Group.</p>
 
 
 
@@ -1044,19 +1044,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680802039"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680802039"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680802039"></script>
-    <script src="/js/jquery.sticky.js?1680802039"></script>
-    <script src="/js/featherlight.min.js?1680802039"></script>
-    <script src="/js/highlight.pack.js?1680802039"></script>
+    <script src="/js/clipboard.min.js?1701073599"></script>
+    <script src="/js/perfect-scrollbar.min.js?1701073599"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1701073599"></script>
+    <script src="/js/jquery.sticky.js?1701073599"></script>
+    <script src="/js/featherlight.min.js?1701073599"></script>
+    <script src="/js/highlight.pack.js?1701073599"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680802039"></script>
-    <script src="/js/learn.js?1680802039"></script>
-    <script src="/js/hugo-learn.js?1680802039"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1701073599"></script>
+    <script src="/js/learn.js?1701073599"></script>
+    <script src="/js/hugo-learn.js?1701073599"></script>
 
-    <link href="/mermaid/mermaid.css?1680802039" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680802039"></script>
+    <link href="/mermaid/mermaid.css?1701073599" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1701073599"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
