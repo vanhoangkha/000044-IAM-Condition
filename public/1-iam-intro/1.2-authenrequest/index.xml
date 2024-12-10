@@ -4,6 +4,8 @@
     <title>Authenticate requests on IAM ROLE &amp; CONDITION</title>
     <link>/1-iam-intro/1.2-authenrequest/</link>
     <description>Recent content in Authenticate requests on IAM ROLE &amp; CONDITION</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/1-iam-intro/1.2-authenrequest/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/1-iam-intro/1.2-authenrequest/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
