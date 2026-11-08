@@ -1,4 +1,4 @@
-# 🛡️ IAM Conditions
+# IAM Conditions
 
 Advanced IAM policy conditions for fine-grained access control.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000044-IAM-Condition/)**
+**[Start the workshop](https://vanhoangkha.github.io/000044-IAM-Condition/)**
 
 ## Prerequisites
 
